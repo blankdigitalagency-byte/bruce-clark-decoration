@@ -1,0 +1,66 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ContactForm from "../components/ContactForm.astro";
+import Icon from "../components/Icon.astro";
+import { business } from "../data/business";
+---
+
+<Layout
+  title="Contact Bruce Clark Decoration | Edinburgh Painter & Decorator"
+  description="Contact Bruce Clark Decoration for a free, no-obligation quote. Call 07591 141732 or fill in our online form."
+  path="/contact"
+>
+  <Breadcrumbs crumbs={[{ label: "Contact Us", path: "/contact" }]} />
+  <PageHero title="Get In Touch" description="Tell us about your project and we'll come back to you with clear, honest pricing." />
+
+  <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div class="grid gap-12 lg:grid-cols-5">
+      <div class="lg:col-span-2">
+        <h2 class="font-display text-2xl font-semibold tracking-tight text-ink-900">Contact Details</h2>
+        <ul class="mt-7 space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-olive-50 text-olive-600"><Icon name="phone" class="h-5 w-5" /></span>
+            <div>
+              <p class="text-sm font-semibold text-ink-900">Call us</p>
+              <a href={business.phoneHref} class="text-sm text-ink-700/80 hover:text-olive-600">{business.phoneDisplay}</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-olive-50 text-olive-600">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="h-5 w-5"><path d="M3 6h18v12H3z"/><path d="m3 7 9 6 9-6"/></svg>
+            </span>
+            <div>
+              <p class="text-sm font-semibold text-ink-900">Email us</p>
+              <a href={`mailto:${business.email}`} class="break-all text-sm text-ink-700/80 hover:text-olive-600">{business.email}</a>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-olive-50 text-olive-600"><Icon name="pin" class="h-5 w-5" /></span>
+            <div>
+              <p class="text-sm font-semibold text-ink-900">Based in</p>
+              <p class="text-sm text-ink-700/80">{business.city}, {business.region} — covering the Lothians</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-olive-50 text-olive-600"><Icon name="clock" class="h-5 w-5" /></span>
+            <div>
+              <p class="text-sm font-semibold text-ink-900">Office hours</p>
+              <p class="text-sm text-ink-700/80">{business.hoursDisplay}</p>
+              <p class="text-sm text-ink-700/80">Closed Saturday and Sunday</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="lg:col-span-3">
+        <h2 class="font-display text-2xl font-semibold tracking-tight text-ink-900">Request a Quote</h2>
+        <p class="mt-2 text-sm text-ink-700/70">Tell us a bit about the job and we'll come back to you with next steps — every quote is free and with no obligation.</p>
+        <div class="mt-6">
+          <ContactForm />
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>

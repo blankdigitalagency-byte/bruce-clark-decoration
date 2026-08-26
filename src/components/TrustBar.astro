@@ -1,0 +1,28 @@
+---
+import Icon from "./Icon.astro";
+import { business } from "../data/business";
+
+const points = [
+  { icon: "clock" as const, title: `${business.yearsExperience} years' experience`, desc: "Established Edinburgh decorator" },
+  { icon: "star" as const, title: `${business.rating} rating, ${business.reviewCount} reviews`, desc: "Rated on Google" },
+  { icon: "brush" as const, title: "Free, no-obligation quotes", desc: "Every job priced individually" },
+];
+---
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="-mt-10 grid gap-4 rounded-2xl bg-white p-2 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-black/5 sm:rounded-2xl sm:border sm:border-black/5 sm:p-0 sm:shadow-brand">
+      {points.map((p) => (
+        <div class="flex items-center gap-4 rounded-xl border border-black/5 bg-white p-5 shadow-sm sm:rounded-none sm:border-0 sm:bg-transparent sm:p-7 sm:shadow-none">
+          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-olive-50 text-olive-600">
+            <Icon name={p.icon} class="h-5 w-5" />
+          </span>
+          <div>
+            <p class="font-display text-base font-bold text-ink-900">{p.title}</p>
+            <p class="text-xs text-ink-700/65">{p.desc}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

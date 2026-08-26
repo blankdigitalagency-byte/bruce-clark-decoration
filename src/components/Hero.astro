@@ -1,0 +1,41 @@
+---
+import PhotoPlaceholder from "./PhotoPlaceholder.astro";
+import { business } from "../data/business";
+
+interface Props {
+  answerSentence: string;
+}
+const { answerSentence } = Astro.props;
+---
+
+<section class="relative overflow-hidden bg-gradient-to-b from-cream-100 to-white">
+  <div class="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-24 lg:px-8">
+    <div>
+      <p class="inline-flex items-center gap-2 rounded-full border border-olive-600/25 bg-olive-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-olive-700">
+        {business.rating}★ from {business.reviewCount} Google reviews
+      </p>
+      <h1 class="mt-5 font-display text-4xl font-semibold leading-[1.1] tracking-tight text-ink-900 sm:text-5xl lg:text-[3.4rem]">
+        Painters &amp; decorators<br /> Edinburgh trusts
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink-700/85">
+        {answerSentence}
+      </p>
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-olive-600 px-7 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-olive-700">
+          Get a Free Quote
+        </a>
+        <a href={business.phoneHref} class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-ink-900/15 px-7 py-3.5 text-sm font-bold text-ink-900 transition hover:bg-ink-900/5">
+          Call {business.phoneDisplay}
+        </a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <PhotoPlaceholder caption="Recent project — interior repaint, Edinburgh" aspect="wide" />
+      <div class="absolute -bottom-6 -left-4 hidden rounded-2xl bg-white p-5 shadow-brand ring-1 ring-black/5 sm:block">
+        <p class="font-display text-3xl font-semibold text-olive-600">{business.yearsExperience}</p>
+        <p class="text-xs font-medium text-ink-700/70">Years' Experience</p>
+      </div>
+    </div>
+  </div>
+</section>

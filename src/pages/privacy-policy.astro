@@ -1,0 +1,67 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import { business } from "../data/business";
+---
+
+<Layout
+  title="Privacy Policy | Bruce Clark Decoration"
+  description="Privacy policy for Bruce Clark Decoration — how we collect, use and protect your personal data."
+  path="/privacy-policy"
+  noindex
+>
+  <Breadcrumbs crumbs={[{ label: "Privacy Policy", path: "/privacy-policy" }]} />
+  <PageHero title="Privacy Policy" description="How we collect, use and protect your personal information, in line with UK GDPR and PECR." />
+
+  <section class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <div class="space-y-8 text-sm leading-relaxed text-ink-700/85">
+      <p><strong>Last updated:</strong> {new Date().toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" })}</p>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">Who we are</h2>
+        <p class="mt-2">{business.name} ("we", "us", "our") is a painting and decorating business based in {business.city}, Scotland. You can contact us at {business.email} or {business.phoneDisplay}.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">What information we collect</h2>
+        <p class="mt-2">When you contact us by phone, email or through our website contact form, we may collect your name, phone number, email address, property address and details of the work you'd like carried out. If you accept analytics cookies, we also collect anonymised usage data about how you browse this website (see "Cookies" below).</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">How we use your information</h2>
+        <p class="mt-2">We use the information you provide to respond to enquiries, prepare quotes, and schedule and carry out decorating work. We do not sell your information, and we only share it with the third-party services listed below where necessary to run our business and this website.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">Our lawful basis for processing</h2>
+        <p class="mt-2">We process contact form and enquiry data on the basis of legitimate interest (responding to your enquiry) and, where a job proceeds, to take steps towards or perform a contract with you. Analytics cookies are only set with your consent.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">Third-party services</h2>
+        <p class="mt-2">Our contact form is processed by <strong>Web3Forms</strong>, which delivers your enquiry to our email inbox. Where you consent to analytics cookies, we use <strong>Google Analytics (GA4)</strong> to understand how visitors use this site. These providers may process data outside the UK/EEA under their own privacy terms and standard safeguards.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">Cookies</h2>
+        <p class="mt-2">This site uses essential cookies required for it to function correctly, which do not require consent. With your consent (via the cookie banner), we also use Google Analytics cookies to understand site usage in aggregate — you can decline these, and can change your choice at any time by clearing your browser's site data for this domain and reloading the page.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">How long we keep your information</h2>
+        <p class="mt-2">We retain enquiry and job records for as long as necessary to respond to you, carry out any agreed work, and meet our legal and accounting obligations.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">Your rights</h2>
+        <p class="mt-2">Under UK GDPR, you have the right to request access to, correction of, or deletion of your personal data, and to object to or restrict certain processing. To make a request, contact us at {business.email}. You also have the right to complain to the <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer" class="font-medium text-olive-700 underline underline-offset-2">Information Commissioner's Office (ICO)</a> if you believe your data has been mishandled.</p>
+      </div>
+
+      <div>
+        <h2 class="font-display text-xl font-bold text-ink-900">Contact</h2>
+        <p class="mt-2">If you have any questions about this policy, contact us at {business.email} or {business.phoneDisplay}.</p>
+      </div>
+    </div>
+  </section>
+</Layout>

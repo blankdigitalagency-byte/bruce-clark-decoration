@@ -1,0 +1,57 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import Faq from "../components/Faq.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { business } from "../data/business";
+
+// TODO(client): confirm public liability insurance so the answer below can state it directly.
+// Until confirmed, this deliberately avoids asserting "yes, insured" as fact.
+const faqs = [
+  {
+    q: "How much does painting and decorating cost?",
+    a: "We don't publish set prices, because every job is different — room size, surface condition, access and finish all affect cost. Get in touch with some details about your project and we'll give you a clear, honest quote before any work starts.",
+  },
+  {
+    q: "How do I get a quote?",
+    a: `Call us on ${business.phoneDisplay} or fill in our contact form with a few details about the job. For most jobs we'll arrange to see the space before confirming a price, so there are no surprises later.`,
+  },
+  {
+    q: "How long will my job take?",
+    a: "It depends on the size and scope of the work — a single room typically takes one to two days, while a full property or exterior project can take a week or more. We'll give you an accurate timescale as part of your quote.",
+  },
+  {
+    q: "Are you insured?",
+    a: "Get in touch and we're happy to talk through our insurance cover for your specific job.",
+  },
+  {
+    q: "Do you provide free quotes?",
+    a: "Yes, quotes are always free and with no obligation.",
+  },
+  {
+    q: "What areas do you cover?",
+    a: "We cover Edinburgh and the Lothians, including The Grange, New Town, Merchiston, Morningside, Colinton and Stockbridge, and we'll travel further for the right job. Get in touch to confirm coverage for your area.",
+  },
+  {
+    q: "Do you offer both residential and commercial decorating?",
+    a: "Yes, we take on residential jobs of every size alongside commercial and rental property decorating, including out-of-hours scheduling where needed.",
+  },
+  {
+    q: "Can you match existing paint colours or wallpaper?",
+    a: "Yes, colour matching is something we do regularly, whether you're touching up an existing scheme or blending new work into an older finish.",
+  },
+];
+---
+
+<Layout
+  title="FAQ | Painting & Decorating Questions | Bruce Clark Decoration"
+  description="Answers to common questions about pricing, timescales, insurance and quotes for painting and decorating in Edinburgh."
+  path="/faq"
+>
+  <Breadcrumbs crumbs={[{ label: "FAQ", path: "/faq" }]} />
+  <PageHero title="Frequently Asked Questions" description="Straight answers about pricing, timescales and how we work." />
+
+  <Faq faqs={faqs} title="Common Questions" />
+  <CtaBand title="Still have a question?" description="Get in touch and we'll be happy to help." />
+</Layout>

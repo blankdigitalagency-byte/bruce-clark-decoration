@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import BeforeAfter from "../components/BeforeAfter.astro";
+import CtaBand from "../components/CtaBand.astro";
+
+// TODO(client): replace these placeholder pairs with real before/after photos once received,
+// and confirm each client is comfortable with the address being identifiable before publishing.
+const projects = [
+  { title: "The Grange", description: "Interior redecoration, Victorian villa." },
+  { title: "Blackford", description: "Full interior repaint." },
+  { title: "Braids", description: "Exterior painting and decorating." },
+  { title: "Mortonhall", description: "Residential interior and exterior work." },
+  { title: "Scotland Street, New Town", description: "Period property redecoration." },
+  { title: "West Castle Road", description: "Interior painting and wallpaper hanging." },
+];
+---
+
+<Layout
+  title="Gallery | Bruce Clark Decoration"
+  description="Before and after photos of painting and decorating projects across Edinburgh by Bruce Clark Decoration."
+  path="/gallery"
+>
+  <Breadcrumbs crumbs={[{ label: "Gallery", path: "/gallery" }]} />
+  <PageHero title="Our Work" description="Real before-and-after results from painting and decorating projects across Edinburgh." />
+
+  <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+      {projects.map((p) => (
+        <BeforeAfter title={p.title} description={p.description} />
+      ))}
+    </div>
+    <p class="mt-10 text-center text-sm text-ink-700/60">
+      Real project photos are on their way — check back soon to see the finished results.
+    </p>
+  </section>
+
+  <CtaBand title="Like what you see?" description="Get in touch for a free, no-obligation quote on your own project." />
+</Layout>

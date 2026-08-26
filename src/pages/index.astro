@@ -1,0 +1,72 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import TrustBar from "../components/TrustBar.astro";
+import ServicesGrid from "../components/ServicesGrid.astro";
+import ValuesSection from "../components/ValuesSection.astro";
+import ProcessSteps from "../components/ProcessSteps.astro";
+import Faq from "../components/Faq.astro";
+import CtaBand from "../components/CtaBand.astro";
+import Icon from "../components/Icon.astro";
+import { business, locations, extraAreas } from "../data/business";
+
+const homeFaqs = [
+  {
+    q: "What areas do you cover?",
+    a: `We cover Edinburgh and the Lothians, including ${locations.map((l) => l.name).join(", ")}, plus ${extraAreas.join(", ")} for the right job. Get in touch to confirm coverage for your postcode.`,
+  },
+  {
+    q: "Do you provide free quotes?",
+    a: `Yes, every job is quoted individually and free of charge. Contact us on ${business.phoneDisplay} or use our online form and we'll get back to you with clear, honest pricing.`,
+  },
+  {
+    q: "Do you do both interior and exterior work?",
+    a: "Yes, we handle interior painting, wallpaper hanging and Ames taping as well as exterior painting and decorating on render, sandstone and woodwork.",
+  },
+  {
+    q: "Can you take on commercial and rental property work?",
+    a: "Yes, we regularly decorate offices, shops, stairwells and let properties, and can schedule around trading hours or tenancy turnaround.",
+  },
+  {
+    q: "How far in advance should I book?",
+    a: "It depends on the season and job size — get in touch as early as you can and we'll give you an honest idea of our current availability.",
+  },
+];
+---
+
+<Layout
+  title="Painter & Decorator Edinburgh | Bruce Clark Decoration"
+  description="Bruce Clark Decoration provides residential and commercial painting and decorating across Edinburgh and the Lothians, with 26+ years' experience and a 5.0 Google rating from 28 reviews."
+  path="/"
+>
+  <Hero answerSentence={`${business.name} provides residential and commercial painting and decorating across Edinburgh and the Lothians, with over ${business.yearsExperience.replace("+", "")} years' experience and a ${business.rating} Google rating from ${business.reviewCount} reviews.`} />
+
+  <TrustBar />
+  <ServicesGrid />
+  <ValuesSection />
+  <ProcessSteps />
+
+  <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Areas We Cover</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">Edinburgh &amp; the Lothians</h2>
+      <p class="mt-4 text-ink-700/80">
+        We work right across Edinburgh, with dedicated experience in the following areas — and we'll travel further afield for the right job, including {extraAreas.join(", ")}.
+      </p>
+    </div>
+    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {locations.map((l) => (
+        <a href={`/decorator-in-${l.slug}-edinburgh`} class="group flex items-center justify-between gap-3 rounded-xl border border-black/10 bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-brand">
+          <span class="flex items-center gap-3 font-display text-sm font-bold text-ink-900">
+            <Icon name="pin" class="h-4 w-4 text-olive-600" />
+            {l.name}
+          </span>
+          <svg class="h-4 w-4 text-olive-600 transition-transform group-hover:translate-x-1" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <Faq faqs={homeFaqs} subtitle="Straight answers to the questions Edinburgh homeowners and businesses ask us most." />
+  <CtaBand />
+</Layout>

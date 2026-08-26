@@ -1,0 +1,30 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { business } from "../data/business";
+---
+
+<Layout
+  title="Page Not Found | Bruce Clark Decoration"
+  description="Sorry, this page couldn't be found."
+  path="/404"
+  noindex
+>
+  <section class="mx-auto flex min-h-[60vh] max-w-2xl flex-col items-center justify-center px-4 py-24 text-center sm:px-6">
+    <p class="font-display text-6xl font-semibold text-olive-500">404</p>
+    <h1 class="mt-4 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">Page not found</h1>
+    <p class="mt-4 text-ink-700/80">
+      The page you're looking for doesn't exist or may have moved. Try one of the links below, or get in touch directly.
+    </p>
+    <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+      <a href="/" class="inline-flex items-center justify-center gap-2 rounded-full bg-olive-600 px-6 py-3 text-sm font-bold text-white transition hover:bg-olive-700">
+        Back to Home
+      </a>
+      <a href="/contact" class="inline-flex items-center justify-center gap-2 rounded-full border-2 border-ink-900/15 px-6 py-3 text-sm font-bold text-ink-900 transition hover:bg-ink-900/5">
+        Contact Us
+      </a>
+    </div>
+    <p class="mt-8 text-sm text-ink-700/60">
+      Or call us directly on <a href={business.phoneHref} class="font-medium text-olive-700 underline underline-offset-2">{business.phoneDisplay}</a>
+    </p>
+  </section>
+</Layout>

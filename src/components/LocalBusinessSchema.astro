@@ -1,0 +1,46 @@
+---
+import { business, locations, extraAreas } from "../data/business";
+
+const sameAs = [business.instagram, business.facebook].filter(Boolean);
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "HousePainter",
+  "@id": `${business.siteUrl}/#business`,
+  name: business.name,
+  alternateName: business.shortName,
+  image: `${business.siteUrl}/og-default.jpg`,
+  url: business.siteUrl,
+  telephone: business.phoneHref.replace("tel:", ""),
+  priceRange: "££",
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: business.city,
+    addressRegion: business.region,
+    addressCountry: business.country,
+  },
+  geo: {
+    "@type": "GeoCoordinates",
+    latitude: business.latitude,
+    longitude: business.longitude,
+  },
+  areaServed: [
+    ...locations.map((l) => ({ "@type": "Place", name: `${l.name}, Edinburgh` })),
+    ...extraAreas.map((a) => ({ "@type": "Place", name: a })),
+  ],
+  openingHoursSpecification: business.openingHours.map((h) => ({
+    "@type": "OpeningHoursSpecification",
+    dayOfWeek: h.days,
+    opens: h.opens,
+    closes: h.closes,
+  })),
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: business.rating,
+    reviewCount: business.reviewCount,
+  },
+  ...(sameAs.length > 0 ? { sameAs } : {}),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

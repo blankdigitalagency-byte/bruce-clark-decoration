@@ -1,0 +1,32 @@
+---
+import FaqSchema from "./FaqSchema.astro";
+
+interface Props {
+  faqs: { q: string; a: string }[];
+  title?: string;
+  subtitle?: string;
+}
+const { faqs, title = "Frequently Asked Questions", subtitle } = Astro.props;
+---
+
+<FaqSchema faqs={faqs} />
+<section class="mx-auto max-w-3xl px-4 py-20 sm:px-6 lg:px-8">
+  <div class="text-center">
+    <h2 class="font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">{title}</h2>
+    {subtitle && <p class="mt-4 text-ink-700/80">{subtitle}</p>}
+  </div>
+
+  <div class="mt-10 divide-y divide-black/10 rounded-2xl border border-black/10 bg-white shadow-sm">
+    {faqs.map((f, i) => (
+      <details class="group px-6 py-1 open:bg-olive-50/40 first:rounded-t-2xl last:rounded-b-2xl" {...(i === 0 ? { open: true } : {})}>
+        <summary class="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-display text-base font-bold text-ink-900">
+          {f.q}
+          <svg class="h-5 w-5 shrink-0 text-olive-600 transition-transform group-open:rotate-45" viewBox="0 0 20 20" fill="none">
+            <path d="M10 4v12M4 10h12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </summary>
+        <p class="pb-5 text-sm leading-relaxed text-ink-700/80">{f.a}</p>
+      </details>
+    ))}
+  </div>
+</section>

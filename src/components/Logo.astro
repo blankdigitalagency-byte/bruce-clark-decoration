@@ -1,0 +1,14 @@
+---
+interface Props {
+  variant?: "dark" | "light";
+  class?: string;
+}
+const { variant = "dark", class: className = "" } = Astro.props;
+const nameColor = variant === "dark" ? "text-ink-900" : "text-white";
+const subColor = variant === "dark" ? "text-ink-700/70" : "text-white/65";
+---
+
+<span class={`inline-flex items-baseline gap-2 font-display ${className}`}>
+  <span class={`text-xl font-semibold tracking-tight sm:text-2xl ${nameColor}`}>Bruce Clark</span>
+  <span class={`hidden text-sm font-normal italic tracking-wide sm:inline ${subColor}`}>Decoration</span>
+</span>

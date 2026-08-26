@@ -1,0 +1,32 @@
+---
+import PhotoPlaceholder from "./PhotoPlaceholder.astro";
+import Icon from "./Icon.astro";
+
+interface Props {
+  photoCaption: string;
+  heading: string;
+  bullets: string[];
+  reverse?: boolean;
+}
+const { photoCaption, heading, bullets, reverse = false } = Astro.props;
+---
+
+<section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+  <div class:list={["grid gap-12 lg:grid-cols-2 lg:items-center", reverse && "lg:[&>*:first-child]:order-2"]}>
+    <PhotoPlaceholder caption={photoCaption} aspect="wide" />
+    <div>
+      <h2 class="font-display text-2xl font-semibold tracking-tight text-ink-900 sm:text-3xl">{heading}</h2>
+      <slot />
+      <ul class="mt-7 space-y-3.5">
+        {bullets.map((b) => (
+          <li class="flex items-start gap-3 text-sm text-ink-700/85">
+            <span class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-olive-600 text-white">
+              <Icon name="check" class="h-3 w-3" />
+            </span>
+            {b}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

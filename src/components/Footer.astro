@@ -1,0 +1,80 @@
+---
+import Logo from "./Logo.astro";
+import Icon from "./Icon.astro";
+import { business, services, locations, extraAreas } from "../data/business";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-ink-900 text-white/80">
+  <div class="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+      <div>
+        <a href="/"><Logo variant="light" /></a>
+        <p class="mt-4 text-sm leading-relaxed">
+          {business.yearsExperience} years' experience painting and decorating homes and businesses across Edinburgh and the Lothians.
+        </p>
+        <div class="mt-5 flex items-center gap-4">
+          <a href={business.instagram} target="_blank" rel="noopener noreferrer" aria-label="Bruce Clark Decoration on Instagram" class="text-white/70 hover:text-olive-400">
+            <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="0.8" fill="currentColor" stroke="none"/></svg>
+          </a>
+          {business.facebook && (
+            <a href={business.facebook} target="_blank" rel="noopener noreferrer" aria-label="Bruce Clark Decoration on Facebook" class="text-white/70 hover:text-olive-400">
+              <svg viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 21v-7h2.5l.5-3H14V9c0-.9.3-1.5 1.7-1.5H17V4.8C16.7 4.8 15.7 4.7 14.6 4.7c-2.3 0-3.9 1.4-3.9 4V11H8v3h2.7v7"/></svg>
+            </a>
+          )}
+        </div>
+        {business.certifications.length > 0 && (
+          <div class="mt-5 flex flex-wrap items-center gap-2">
+            {business.certifications.map((c) => (
+              <span class="rounded-full border border-white/15 px-3 py-1 text-[11px] font-medium text-white/70">{c.name}</span>
+            ))}
+          </div>
+        )}
+      </div>
+
+      <div>
+        <h3 class="font-display text-sm font-semibold uppercase tracking-wide text-white">Decorating Services</h3>
+        <ul class="mt-4 space-y-2.5 text-sm">
+          {services.map((s) => (
+            <li><a href={`/${s.slug}`} class="hover:text-olive-400">{s.navLabel}</a></li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-display text-sm font-semibold uppercase tracking-wide text-white">Areas We Cover</h3>
+        <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2.5 text-sm">
+          {locations.map((l) => (
+            <li><a href={`/decorator-in-${l.slug}-edinburgh`} class="hover:text-olive-400">{l.name}</a></li>
+          ))}
+          {extraAreas.map((a) => (
+            <li class="text-white/55">{a}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="font-display text-sm font-semibold uppercase tracking-wide text-white">Get In Touch</h3>
+        <ul class="mt-4 space-y-3 text-sm">
+          <li><a href={business.phoneHref} class="hover:text-olive-400">{business.phoneDisplay}</a></li>
+          <li><a href={`mailto:${business.email}`} class="break-all hover:text-olive-400">{business.email}</a></li>
+          <li>{business.city}, {business.region}</li>
+          <li>{business.hoursDisplay}</li>
+        </ul>
+        <a href="/contact" class="mt-5 inline-block rounded-full bg-olive-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-olive-700">
+          Request a Quote
+        </a>
+      </div>
+    </div>
+
+    <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row">
+      <p>&copy; {year} {business.name}. All rights reserved.</p>
+      <div class="flex items-center gap-2">
+        <Icon name="star" class="h-3.5 w-3.5 text-olive-400" />
+        <span>{business.rating} rating from {business.reviewCount} Google reviews</span>
+      </div>
+      <a href="/privacy-policy" class="hover:text-white">Privacy Policy</a>
+    </div>
+  </div>
+</footer>

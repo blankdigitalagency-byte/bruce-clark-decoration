@@ -1,0 +1,26 @@
+---
+import PhotoPlaceholder from "./PhotoPlaceholder.astro";
+
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description } = Astro.props;
+---
+
+<div class="overflow-hidden rounded-2xl border border-black/10 bg-white shadow-brand">
+  <div class="grid grid-cols-2">
+    <div class="relative">
+      <PhotoPlaceholder caption={`Before — ${title}`} aspect="square" class="rounded-none border-0 shadow-none" />
+      <span class="absolute left-3 top-3 rounded-full bg-ink-900/85 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">Before</span>
+    </div>
+    <div class="relative">
+      <PhotoPlaceholder caption={`After — ${title}`} aspect="square" class="rounded-none border-0 shadow-none" />
+      <span class="absolute left-3 top-3 rounded-full bg-olive-600 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-white">After</span>
+    </div>
+  </div>
+  <div class="px-5 py-4">
+    <h3 class="font-display text-base font-bold text-ink-900">{title}</h3>
+    {description && <p class="mt-1 text-sm leading-relaxed text-ink-700/75">{description}</p>}
+  </div>
+</div>

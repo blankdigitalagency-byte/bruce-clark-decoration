@@ -1,0 +1,21 @@
+{
+  "name": "Bruce Clark Decoration",
+  "short_name": "Bruce Clark",
+  "description": "Painters & decorators in Edinburgh — 26+ years' experience.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfdfb",
+  "theme_color": "#7f8f3a",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

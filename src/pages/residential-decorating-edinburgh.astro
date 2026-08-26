@@ -1,0 +1,36 @@
+---
+import Layout from "../layouts/Layout.astro";
+import PageHero from "../components/PageHero.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+import ServiceSchema from "../components/ServiceSchema.astro";
+import ServiceDetail from "../components/ServiceDetail.astro";
+import Faq from "../components/Faq.astro";
+import ServicesGrid from "../components/ServicesGrid.astro";
+import CtaBand from "../components/CtaBand.astro";
+import { services } from "../data/business";
+
+const service = services.find((s) => s.slug === "residential-decorating-edinburgh")!;
+---
+
+<Layout
+  title="Residential Decorator Edinburgh | Interior Painting | Bruce Clark Decoration"
+  description={service.metaDescription}
+  path={`/${service.slug}`}
+>
+  <ServiceSchema serviceName={service.name} description={service.metaDescription} path={`/${service.slug}`} />
+  <Breadcrumbs crumbs={[{ label: service.shortName, path: `/${service.slug}` }]} />
+  <PageHero title={service.name} description={service.summary} />
+
+  <ServiceDetail photoCaption="Interior repaint, Edinburgh home" heading="Interior decorating, done properly" bullets={service.bullets}>
+    <p class="mt-4 text-ink-700/80 leading-relaxed">
+      Whether it's refreshing a single room or redecorating a whole property, we bring the same care to every job — proper preparation, protection for your floors and furniture, and a finish that's built to last. We work across Edinburgh's tenement flats, New Town properties and family homes, and we're happy to advise on colour and finish if you're not sure where to start.
+    </p>
+    <p class="mt-4 text-ink-700/80 leading-relaxed">
+      Need wallpaper hung as part of the job? See our <a href="/wallpaper-hanging-ames-taping-edinburgh" class="font-medium text-olive-700 underline underline-offset-2">Specialist Finishes</a> page for full detail on wallpaper hanging and Ames taping.
+    </p>
+  </ServiceDetail>
+
+  <Faq faqs={service.faqs} title="Residential Decorating: Common Questions" />
+  <ServicesGrid currentSlug={service.slug} />
+  <CtaBand title="Ready to refresh your home?" description="Get in touch for a free, no-obligation quote — we'll come and assess the job at a time that suits you." />
+</Layout>

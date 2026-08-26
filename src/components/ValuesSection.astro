@@ -1,0 +1,32 @@
+---
+import Icon from "./Icon.astro";
+
+const values = [
+  { title: "Prompt", desc: "We turn up when we say we will, and keep you updated on timescales throughout the job.", icon: "clock" as const },
+  { title: "Reliable", desc: "26+ years of finishing what we start, to a standard we'd be happy with in our own home.", icon: "shield" as const },
+  { title: "Professional", desc: "Tidy, considerate work — dust sheets down, surfaces protected, and no mess left behind.", icon: "check" as const },
+];
+---
+
+<section class="bg-olive-50/50">
+  <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Our Values</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">
+        Why Edinburgh keeps calling us back
+      </h2>
+    </div>
+
+    <div class="mt-12 grid gap-6 sm:grid-cols-3">
+      {values.map((v) => (
+        <div class="rounded-2xl bg-white p-8 text-center shadow-sm ring-1 ring-black/5 transition hover:-translate-y-1 hover:shadow-brand">
+          <span class="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-olive-100 text-olive-600">
+            <Icon name={v.icon} class="h-7 w-7" />
+          </span>
+          <h3 class="mt-5 font-display text-lg font-bold text-ink-900">{v.title}</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-ink-700/75">{v.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+---
+import { business } from "../data/business";
+
+interface Crumb {
+  label: string;
+  path: string;
+}
+interface Props {
+  crumbs: Crumb[];
+}
+const { crumbs } = Astro.props;
+const items = [{ label: "Home", path: "/" }, ...crumbs];
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: items.map((item, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: item.label,
+    item: new URL(item.path, business.siteUrl).toString(),
+  })),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
+<nav aria-label="Breadcrumb" class="mx-auto max-w-7xl px-4 pt-5 text-xs text-ink-700/70 sm:px-6 lg:px-8">
+  <ol class="flex flex-wrap items-center gap-1.5">
+    {items.map((item, i) => (
+      <li class="flex items-center gap-1.5">
+        {i > 0 && <span aria-hidden="true">/</span>}
+        {i === items.length - 1 ? (
+          <span class="font-medium text-ink-900" aria-current="page">{item.label}</span>
+        ) : (
+          <a href={item.path} class="hover:text-olive-600">{item.label}</a>
+        )}
+      </li>
+    ))}
+  </ol>
+</nav>

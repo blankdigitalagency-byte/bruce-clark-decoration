@@ -1,0 +1,20 @@
+---
+import { business } from "../data/business";
+
+interface Props {
+  areaName: string;
+  path: string;
+}
+const { areaName, path } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  serviceType: "Painting and Decorating",
+  provider: { "@id": `${business.siteUrl}/#business` },
+  areaServed: { "@type": "Place", name: `${areaName}, Edinburgh` },
+  url: new URL(path, business.siteUrl).toString(),
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
