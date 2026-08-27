@@ -9,7 +9,7 @@ const { answerSentence } = Astro.props;
 ---
 
 <section class="relative overflow-hidden bg-gradient-to-b from-cream-100 to-white">
-  <div class="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-center lg:py-24 lg:px-8">
+  <div class="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:items-start lg:py-24 lg:px-8">
     <div>
       <p class="inline-flex items-center gap-2 rounded-full border border-olive-600/25 bg-olive-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-olive-700">
         {business.rating}★ from {business.reviewCount} Google reviews
@@ -30,9 +30,9 @@ const { answerSentence } = Astro.props;
       </div>
     </div>
 
-    <div class="relative">
+    <div class="relative pb-6 pl-4 sm:pb-8 sm:pl-6">
       <PhotoPlaceholder caption="Recent project — interior repaint, Edinburgh" aspect="wide" />
-      <div class="absolute -bottom-6 -left-4 hidden rounded-2xl bg-white p-5 shadow-brand ring-1 ring-black/5 sm:block">
+      <div class="absolute bottom-0 left-0 hidden rounded-2xl bg-white p-5 shadow-brand ring-1 ring-black/5 sm:block">
         <p class="font-display text-3xl font-semibold text-olive-600">{business.yearsExperience}</p>
         <p class="text-xs font-medium text-ink-700/70">Years' Experience</p>
       </div>
