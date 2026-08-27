@@ -22,6 +22,14 @@
   --color-cream-50: #fdfdfb;
   --color-cream-100: #f7f6f0;
 
+  --color-beige-50: #f8f2e4;
+  --color-beige-100: #f0e5cd;
+  --color-beige-200: #e4d3a9;
+
+  --color-gold-400: #c9a24a;
+  --color-gold-500: #b58a34;
+  --color-gold-600: #96702a;
+
   --shadow-brand: 0 20px 45px -14px rgb(28 28 26 / 0.18);
 }
 

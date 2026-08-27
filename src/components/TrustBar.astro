@@ -3,9 +3,9 @@ import Icon from "./Icon.astro";
 import { business } from "../data/business";
 
 const points = [
-  { icon: "clock" as const, title: `${business.yearsExperience} years' experience`, desc: "Established Edinburgh decorator" },
-  { icon: "star" as const, title: `${business.rating} rating, ${business.reviewCount} reviews`, desc: "Rated on Google" },
-  { icon: "brush" as const, title: "Free, no-obligation quotes", desc: "Every job priced individually" },
+  { icon: "clock" as const, title: `${business.yearsExperience} years' experience`, desc: "Established Edinburgh decorator", badge: "bg-olive-600" },
+  { icon: "star" as const, title: `${business.rating} rating, ${business.reviewCount} reviews`, desc: "Rated on Google", badge: "bg-gold-500" },
+  { icon: "brush" as const, title: "Free, no-obligation quotes", desc: "Every job priced individually", badge: "bg-olive-600" },
 ];
 ---
 
@@ -14,7 +14,7 @@ const points = [
     <div class="-mt-10 grid gap-4 rounded-2xl bg-white p-2 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-black/5 sm:rounded-2xl sm:border sm:border-black/5 sm:p-0 sm:shadow-brand">
       {points.map((p) => (
         <div class="flex items-center gap-4 rounded-xl border border-black/5 bg-white p-5 shadow-sm sm:rounded-none sm:border-0 sm:bg-transparent sm:p-7 sm:shadow-none">
-          <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-olive-600 text-white">
+          <span class:list={["flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white", p.badge]}>
             <Icon name={p.icon} class="h-5 w-5" />
           </span>
           <div>
