@@ -1,14 +1,19 @@
 ---
+import { Image } from "astro:assets";
+import logo from "../assets/bruce-clark-logo.png";
+
 interface Props {
   variant?: "dark" | "light";
   class?: string;
 }
 const { variant = "dark", class: className = "" } = Astro.props;
-const nameColor = variant === "dark" ? "text-ink-900" : "text-white";
-const subColor = variant === "dark" ? "text-ink-700/70" : "text-white/65";
+const invert = variant === "light" ? "invert" : "";
 ---
 
-<span class={`inline-flex items-baseline gap-2 font-display ${className}`}>
-  <span class={`text-xl font-semibold tracking-tight sm:text-2xl ${nameColor}`}>Bruce Clark</span>
-  <span class={`hidden text-sm font-normal italic tracking-wide sm:inline ${subColor}`}>Decoration</span>
-</span>
+<Image
+  src={logo}
+  alt="Bruce Clark Decoration"
+  width={900}
+  height={70}
+  class={`h-5 w-auto object-contain sm:h-6 lg:h-7 ${invert} ${className}`}
+/>
