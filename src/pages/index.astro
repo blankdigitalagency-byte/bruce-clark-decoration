@@ -8,7 +8,6 @@ import ProcessSteps from "../components/ProcessSteps.astro";
 import RecentWork from "../components/RecentWork.astro";
 import Faq from "../components/Faq.astro";
 import CtaBand from "../components/CtaBand.astro";
-import Icon from "../components/Icon.astro";
 import { business, locations, extraAreas } from "../data/business";
 
 const homeFaqs = [
@@ -48,24 +47,25 @@ const homeFaqs = [
   <ProcessSteps />
   <RecentWork />
 
-  <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-    <div class="mx-auto max-w-2xl text-center">
-      <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Areas We Cover</p>
-      <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">Edinburgh &amp; the Lothians</h2>
-      <p class="mt-4 text-ink-700/80">
-        We work right across Edinburgh, with dedicated experience in the following areas — and we'll travel further afield for the right job, including {extraAreas.join(", ")}.
+  <section class="bg-olive-50/50">
+    <div class="mx-auto max-w-3xl px-4 py-20 text-center sm:px-6 lg:px-8">
+      <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Coverage</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">
+        All of Edinburgh <span class="text-olive-600">&amp; the Lothians</span>
+      </h2>
+      <p class="mt-4 text-lg text-ink-700/80">
+        We're not limited to a handful of postcodes — we cover the whole of Edinburgh and the surrounding Lothians, from tenement flats to detached villas, and we'll happily travel further for the right job.
       </p>
-    </div>
-    <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {locations.map((l) => (
-        <a href={`/decorator-in-${l.slug}-edinburgh`} class="group flex items-center justify-between gap-3 rounded-xl border border-black/10 bg-white px-5 py-4 shadow-sm transition hover:-translate-y-0.5 hover:shadow-brand">
-          <span class="flex items-center gap-3 font-display text-sm font-bold text-ink-900">
-            <Icon name="pin" class="h-4 w-4 text-olive-600" />
-            {l.name}
-          </span>
-          <svg class="h-4 w-4 text-olive-600 transition-transform group-hover:translate-x-1" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
-      ))}
+      <p class="mt-6 text-sm text-ink-700/70">
+        We've built up particular local knowledge in areas including{" "}
+        {locations.map((l, i) => (
+          <>
+            <a href={`/decorator-in-${l.slug}-edinburgh`} class="font-medium text-olive-700 underline underline-offset-2 hover:text-olive-800">{l.name}</a>
+            {i < locations.length - 1 ? ", " : ""}
+          </>
+        ))}
+        {" "}— plus {extraAreas.join(", ")}.
+      </p>
     </div>
   </section>
 
