@@ -19,12 +19,12 @@ const { answerSentence } = Astro.props;
       height={1500}
       loading="eager"
       fetchpriority="high"
-      class="absolute inset-0 h-full w-full object-cover object-[30%_50%]"
+      class="h-56 w-full object-cover object-[65%_60%] sm:absolute sm:inset-0 sm:h-full sm:object-[30%_50%]"
     />
-    <div class="absolute inset-0 bg-gradient-to-r from-ink-900/85 via-ink-900/60 to-ink-900/25"></div>
-    <div class="absolute inset-0 bg-gradient-to-t from-ink-900/40 via-transparent to-transparent"></div>
+    <div class="hidden sm:absolute sm:inset-0 sm:block sm:bg-gradient-to-r sm:from-ink-900/85 sm:via-ink-900/60 sm:to-ink-900/25"></div>
+    <div class="hidden sm:absolute sm:inset-0 sm:block sm:bg-gradient-to-t sm:from-ink-900/40 sm:via-transparent sm:to-transparent"></div>
 
-    <div class="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:grid lg:grid-cols-5 lg:items-start lg:gap-10 lg:px-8 lg:py-28">
+    <div class="relative z-10 mx-auto max-w-7xl px-4 py-10 sm:px-6 sm:py-20 lg:grid lg:grid-cols-5 lg:items-start lg:gap-10 lg:px-8 lg:py-28">
       <div class="reveal lg:col-span-3">
         <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.15em] text-white">
           <span class="h-px w-8 bg-olive-300"></span>
