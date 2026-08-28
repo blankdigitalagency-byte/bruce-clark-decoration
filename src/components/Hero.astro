@@ -2,7 +2,7 @@
 import { Image } from "astro:assets";
 import HeroEnquiryForm from "./HeroEnquiryForm.astro";
 import { business } from "../data/business";
-import heroPhoto from "../assets/photos/bathroom-green-tile-repaint.jpg";
+import heroPhoto from "../assets/photos/bay-window-room-empty.jpg";
 
 interface Props {
   answerSentence: string;
@@ -10,55 +10,49 @@ interface Props {
 const { answerSentence } = Astro.props;
 ---
 
-<section class="overflow-hidden bg-white">
-  <div class="relative">
-    <Image
-      src={heroPhoto}
-      alt="Green tiled bathroom repaint with brass fixtures by Bruce Clark Decoration, Edinburgh painters and decorators"
-      width={2000}
-      height={2200}
-      loading="eager"
-      fetchpriority="high"
-      class="h-[38vh] w-full object-cover sm:h-[68vh] lg:h-[90vh]"
-    />
+<section class="relative overflow-hidden bg-ink-900">
+  <Image
+    src={heroPhoto}
+    alt="Elegant repainted period living room with ornate cornicing, fireplace and dark wood flooring, Edinburgh"
+    width={2200}
+    height={1400}
+    loading="eager"
+    fetchpriority="high"
+    class="absolute inset-0 h-full w-full object-cover object-[center_20%]"
+  />
+  <div class="absolute inset-0 bg-gradient-to-r from-ink-900/60 via-ink-900/35 to-ink-900/15"></div>
 
-    <div class="px-4 sm:absolute sm:inset-x-0 sm:bottom-0 sm:px-6 lg:px-8">
-      <div class="mx-auto max-w-7xl">
-        <div class="grid gap-6 lg:grid-cols-5 lg:items-end lg:gap-8">
-          <div class="reveal -mt-10 rounded-2xl bg-cream-50 p-7 shadow-brand sm:mt-0 sm:translate-y-1/2 sm:p-9 lg:col-span-3 lg:translate-y-[38%] lg:p-10">
-            <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.15em] text-olive-700">
-              <span class="h-px w-8 bg-olive-600"></span>
-              Residential &amp; Commercial Decorating
-            </p>
-            <h1 class="mt-5 font-display text-3xl font-semibold leading-[1.15] tracking-tight text-ink-900 sm:text-4xl lg:text-[2.6rem]">
-              Painters &amp; Decorators<br />
-              Edinburgh &amp; Lothians or Surrounding Areas<br />
-              <span class="text-olive-600"><em class="italic">Trusted</em> for {business.yearsExperience} Years</span>
-            </h1>
-            <p class="mt-5 leading-relaxed text-ink-700/85">
-              {answerSentence}
-            </p>
-            <div class="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <a href="/contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-olive-600 px-7 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-olive-700">
-                Get a Free Quote
-              </a>
-              <a href={business.phoneHref} class="text-sm font-bold text-ink-900 underline decoration-olive-600 decoration-2 underline-offset-4 transition hover:text-olive-700">
-                Call {business.phoneDisplay}
-              </a>
-            </div>
-          </div>
+  <div class="relative z-10 mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:grid lg:grid-cols-5 lg:items-start lg:gap-10 lg:px-8 lg:py-28">
+    <div class="reveal lg:col-span-3">
+      <p class="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.15em] text-white/90">
+        <span class="h-px w-8 bg-olive-300"></span>
+        Residential &amp; Commercial Decorating
+      </p>
+      <h1 class="mt-5 font-display text-4xl font-normal leading-[1.15] tracking-tight text-white sm:text-5xl lg:text-[3.4rem]">
+        Painters &amp; Decorators<br />
+        Edinburgh &amp; Lothians or Surrounding Areas<br />
+        <span class="text-olive-300"><em class="italic">Trusted</em> for {business.yearsExperience} Years</span>
+      </h1>
+      <p class="mt-6 max-w-xl text-lg leading-relaxed text-white/80">
+        {answerSentence}
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <a href="/contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-olive-500 px-7 py-3.5 text-sm font-bold text-white shadow-sm transition hover:bg-olive-400">
+          Get a Free Quote
+        </a>
+        <a href={business.phoneHref} class="text-sm font-bold text-white underline decoration-olive-300 decoration-2 underline-offset-4 transition hover:text-olive-300">
+          Call {business.phoneDisplay}
+        </a>
+      </div>
+    </div>
 
-          <div class="reveal rounded-2xl bg-white p-7 shadow-brand ring-1 ring-black/5 sm:p-8 lg:col-span-2 lg:translate-y-[38%]" style="animation-delay: 0.15s">
-            <p class="font-display text-lg font-semibold text-ink-900">Quick Enquiry</p>
-            <p class="mt-1 text-sm text-ink-700/70">Tell us about your project and we'll come back to you within one working day.</p>
-            <div class="mt-5">
-              <HeroEnquiryForm />
-            </div>
-          </div>
-        </div>
+    <div class="reveal mt-10 rounded-2xl bg-white/90 p-7 shadow-2xl ring-1 ring-white/50 backdrop-blur-md sm:p-9 lg:col-span-2 lg:mt-0" style="animation-delay: 0.15s">
+      <p class="text-xs font-semibold uppercase tracking-[0.15em] text-olive-700">Get In Touch</p>
+      <p class="mt-1.5 font-display text-2xl font-semibold text-ink-900">Request a <em class="text-olive-600 not-italic">Quote</em></p>
+      <p class="mt-2 text-sm text-ink-700/70">Tell us about your project and we'll come back to you within one working day.</p>
+      <div class="mt-5">
+        <HeroEnquiryForm />
       </div>
     </div>
   </div>
-
-  <div class="h-6 sm:h-72 lg:h-64"></div>
 </section>
