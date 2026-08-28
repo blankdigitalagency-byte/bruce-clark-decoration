@@ -1,4 +1,5 @@
 ---
+import type { ImageMetadata } from "astro";
 import PhotoPlaceholder from "./PhotoPlaceholder.astro";
 import Icon from "./Icon.astro";
 
@@ -7,13 +8,15 @@ interface Props {
   heading: string;
   bullets: string[];
   reverse?: boolean;
+  image?: ImageMetadata;
+  imageAlt?: string;
 }
-const { photoCaption, heading, bullets, reverse = false } = Astro.props;
+const { photoCaption, heading, bullets, reverse = false, image, imageAlt } = Astro.props;
 ---
 
 <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
   <div class:list={["grid gap-12 lg:grid-cols-2 lg:items-center", reverse && "lg:[&>*:first-child]:order-2"]}>
-    <PhotoPlaceholder caption={photoCaption} aspect="wide" />
+    <PhotoPlaceholder caption={photoCaption} aspect="wide" image={image} imageAlt={imageAlt} />
     <div>
       <h2 class="font-display text-2xl font-semibold tracking-tight text-ink-900 sm:text-3xl">{heading}</h2>
       <slot />

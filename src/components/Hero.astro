@@ -1,6 +1,7 @@
 ---
 import PhotoPlaceholder from "./PhotoPlaceholder.astro";
 import { business } from "../data/business";
+import heroPhoto from "../assets/photos/staircase-mustard-navy-runner.jpg";
 
 interface Props {
   answerSentence: string;
@@ -31,7 +32,12 @@ const { answerSentence } = Astro.props;
     </div>
 
     <div class="relative">
-      <PhotoPlaceholder caption="Recent project — interior repaint, Edinburgh" aspect="wide" class="pb-16 sm:pb-20" />
+      <PhotoPlaceholder
+        caption="Recent project — interior repaint, Edinburgh"
+        aspect="wide"
+        image={heroPhoto}
+        imageAlt="Freshly painted staircase and hallway with mustard walls, navy stair runner and patterned tiled floor, Edinburgh"
+      />
       <div class="absolute bottom-4 left-4 hidden rounded-2xl bg-white p-5 shadow-brand ring-1 ring-black/5 sm:block">
         <p class="font-display text-3xl font-semibold text-olive-600">{business.yearsExperience}</p>
         <p class="text-xs font-medium text-ink-700/70">Years' Experience</p>

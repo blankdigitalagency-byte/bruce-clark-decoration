@@ -1,12 +1,16 @@
 ---
+import type { ImageMetadata } from "astro";
+import { Image } from "astro:assets";
 import Icon from "./Icon.astro";
 
 interface Props {
   caption: string;
   aspect?: "video" | "square" | "portrait" | "wide";
   class?: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
 }
-const { caption, aspect = "video", class: className = "" } = Astro.props;
+const { caption, aspect = "video", class: className = "", image, imageAlt } = Astro.props;
 
 const ratios: Record<string, string> = {
   video: "aspect-[4/3]",
@@ -16,9 +20,19 @@ const ratios: Record<string, string> = {
 };
 ---
 
-<div class={`relative flex ${ratios[aspect]} flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl border border-olive-800/10 bg-gradient-to-br from-olive-50 via-cream-100 to-olive-100 text-center shadow-brand ${className}`}>
-  <div class="absolute inset-0 opacity-[0.07]" style="background-image: repeating-linear-gradient(135deg, currentColor 0, currentColor 1px, transparent 1px, transparent 14px); color: var(--color-olive-800);"></div>
-  <Icon name="brush" class="relative h-8 w-8 text-olive-500/70" />
-  <p class="relative max-w-[80%] text-xs font-medium uppercase tracking-wide text-olive-800/60">Photo coming soon</p>
-  <p class="relative max-w-[85%] font-display text-sm italic text-ink-700/70">{caption}</p>
-</div>
+{image ? (
+  <Image
+    src={image}
+    alt={imageAlt ?? caption}
+    width={1200}
+    height={900}
+    class={`${ratios[aspect]} w-full rounded-2xl object-cover shadow-brand ${className}`}
+  />
+) : (
+  <div class={`relative flex ${ratios[aspect]} flex-col items-center justify-center gap-3 overflow-hidden rounded-2xl border border-olive-800/10 bg-gradient-to-br from-olive-50 via-cream-100 to-olive-100 text-center shadow-brand ${className}`}>
+    <div class="absolute inset-0 opacity-[0.07]" style="background-image: repeating-linear-gradient(135deg, currentColor 0, currentColor 1px, transparent 1px, transparent 14px); color: var(--color-olive-800);"></div>
+    <Icon name="brush" class="relative h-8 w-8 text-olive-500/70" />
+    <p class="relative max-w-[80%] text-xs font-medium uppercase tracking-wide text-olive-800/60">Photo coming soon</p>
+    <p class="relative max-w-[85%] font-display text-sm italic text-ink-700/70">{caption}</p>
+  </div>
+)}

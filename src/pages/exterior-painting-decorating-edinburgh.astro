@@ -8,6 +8,7 @@ import Faq from "../components/Faq.astro";
 import ServicesGrid from "../components/ServicesGrid.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { services } from "../data/business";
+import servicePhoto from "../assets/photos/exterior-navy-front-door.jpg";
 
 const service = services.find((s) => s.slug === "exterior-painting-decorating-edinburgh")!;
 ---
@@ -21,7 +22,13 @@ const service = services.find((s) => s.slug === "exterior-painting-decorating-ed
   <Breadcrumbs crumbs={[{ label: service.shortName, path: `/${service.slug}` }]} />
   <PageHero title={service.name} description={service.summary} />
 
-  <ServiceDetail photoCaption="Exterior repaint, Edinburgh property" heading="Weatherproof exteriors built to last" bullets={service.bullets}>
+  <ServiceDetail
+    photoCaption="Exterior repaint, Edinburgh property"
+    heading="Weatherproof exteriors built to last"
+    bullets={service.bullets}
+    image={servicePhoto}
+    imageAlt="Freshly painted navy front door on a sandstone Edinburgh tenement"
+  >
     <p class="mt-4 text-ink-700/80 leading-relaxed">
       Edinburgh's exteriors — render, harling, sandstone and traditional woodwork — take a battering from Scottish weather, so proper preparation matters more outside than almost anywhere else. We wash down, repair and prime before a single coat of finish goes on, using paint systems suited to the surface and its exposure.
     </p>

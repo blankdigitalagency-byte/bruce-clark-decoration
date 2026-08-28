@@ -1,39 +1,77 @@
 ---
+import { Image } from "astro:assets";
 import Layout from "../layouts/Layout.astro";
 import PageHero from "../components/PageHero.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
-import BeforeAfter from "../components/BeforeAfter.astro";
 import CtaBand from "../components/CtaBand.astro";
 
-// TODO(client): replace these placeholder pairs with real before/after photos once received,
-// and confirm each client is comfortable with the address being identifiable before publishing.
-const projects = [
-  { title: "The Grange", description: "Interior redecoration, Victorian villa." },
-  { title: "Blackford", description: "Full interior repaint." },
-  { title: "Braids", description: "Exterior painting and decorating." },
-  { title: "Mortonhall", description: "Residential interior and exterior work." },
-  { title: "Scotland Street, New Town", description: "Period property redecoration." },
-  { title: "West Castle Road", description: "Interior painting and wallpaper hanging." },
+import bathroomGreenTile from "../assets/photos/bathroom-green-tile-repaint.jpg";
+import bayWindowBareFloor from "../assets/photos/bay-window-room-bare-floor.jpg";
+import bayWindowCorner from "../assets/photos/bay-window-room-corner.jpg";
+import bayWindowEmpty from "../assets/photos/bay-window-room-empty.jpg";
+import bayWindowLightFloor from "../assets/photos/bay-window-room-light-floor.jpg";
+import bedroomDarkWoodwork from "../assets/photos/bedroom-dark-woodwork.jpg";
+import bedroomWallpaperChandelier from "../assets/photos/bedroom-wallpaper-chandelier.jpg";
+import entranceHallStaircase from "../assets/photos/entrance-hall-staircase-view.jpg";
+import entranceHallTiled from "../assets/photos/entrance-hall-tiled-floor.jpg";
+import exteriorNavyDoor from "../assets/photos/exterior-navy-front-door.jpg";
+import hallwayFloral from "../assets/photos/hallway-floral-wallpaper.jpg";
+import hallwayMustard from "../assets/photos/hallway-mustard-shelving.jpg";
+import kitchenIsland from "../assets/photos/kitchen-island-open-plan.jpg";
+import kitchenMustard from "../assets/photos/kitchen-mustard-feature-wall.jpg";
+import landingCorner from "../assets/photos/landing-corner-repaint.jpg";
+import landingPlain from "../assets/photos/landing-plain-repaint.jpg";
+import landingRadiator from "../assets/photos/landing-radiator-repaint.jpg";
+import livingRoomSageGreen from "../assets/photos/living-room-sage-green-repaint.jpg";
+import roomLightWoodFloor from "../assets/photos/room-light-wood-floor.jpg";
+import roomPlainDoor from "../assets/photos/room-plain-door-radiator.jpg";
+import scaffoldPrep from "../assets/photos/scaffold-interior-preparation.jpg";
+import staircaseMustard from "../assets/photos/staircase-mustard-navy-runner.jpg";
+import wallpaperMural from "../assets/photos/wallpaper-mural-feature-wall.jpg";
+
+const photos = [
+  { src: staircaseMustard, alt: "Staircase repaint with mustard walls and navy stair runner, Edinburgh" },
+  { src: bathroomGreenTile, alt: "Green tiled bathroom repaint with brass fixtures, Edinburgh" },
+  { src: kitchenMustard, alt: "Kitchen with mustard feature wall and painted ceiling" },
+  { src: wallpaperMural, alt: "Botanical mural wallpaper feature wall above a herringbone floor" },
+  { src: livingRoomSageGreen, alt: "Sage green living room repaint with fireplace" },
+  { src: exteriorNavyDoor, alt: "Freshly painted navy front door on an Edinburgh tenement" },
+  { src: bedroomWallpaperChandelier, alt: "Bedroom feature wallpaper with chandelier and window seat" },
+  { src: entranceHallStaircase, alt: "Repainted staircase and hallway with patterned tiled floor" },
+  { src: kitchenIsland, alt: "Open-plan kitchen with botanical wallpaper and painted island" },
+  { src: hallwayMustard, alt: "Mustard hallway with built-in painted shelving" },
+  { src: bedroomDarkWoodwork, alt: "Bedroom with freshly painted dark woodwork and shutters" },
+  { src: entranceHallTiled, alt: "Entrance hallway with patterned tile floor and painted staircase" },
+  { src: hallwayFloral, alt: "Hallway with feature floral wallpaper" },
+  { src: bayWindowEmpty, alt: "Repainted period room with fireplace and bay window" },
+  { src: roomLightWoodFloor, alt: "Repainted room with light wood flooring and bay window" },
+  { src: bayWindowBareFloor, alt: "Repainted bay window room with dark wood flooring" },
+  { src: landingRadiator, alt: "Repainted landing with staircase bannister" },
+  { src: bayWindowCorner, alt: "Freshly painted room with bay window and garden doors" },
+  { src: bayWindowLightFloor, alt: "Repainted bay window room with light wood flooring" },
+  { src: landingCorner, alt: "Repainted landing and corridor" },
+  { src: landingPlain, alt: "Repainted landing with painted woodwork" },
+  { src: roomPlainDoor, alt: "Repainted room with painted doors and radiator" },
+  { src: scaffoldPrep, alt: "Interior preparation work ahead of redecoration" },
 ];
 ---
 
 <Layout
   title="Gallery | Bruce Clark Decoration"
-  description="Before and after photos of painting and decorating projects across Edinburgh by Bruce Clark Decoration."
+  description="Photos of recent painting and decorating projects across Edinburgh by Bruce Clark Decoration."
   path="/gallery"
 >
   <Breadcrumbs crumbs={[{ label: "Gallery", path: "/gallery" }]} />
-  <PageHero title="Our Work" description="Real before-and-after results from painting and decorating projects across Edinburgh." />
+  <PageHero title="Our Work" description="A selection of recent painting and decorating projects across Edinburgh." />
 
   <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
-    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-      {projects.map((p) => (
-        <BeforeAfter title={p.title} description={p.description} />
+    <div class="columns-1 gap-5 sm:columns-2 lg:columns-3">
+      {photos.map((p) => (
+        <div class="mb-5 break-inside-avoid overflow-hidden rounded-2xl shadow-brand ring-1 ring-black/5">
+          <Image src={p.src} alt={p.alt} width={900} height={900} class="w-full object-cover" />
+        </div>
       ))}
     </div>
-    <p class="mt-10 text-center text-sm text-ink-700/60">
-      Real project photos are on their way — check back soon to see the finished results.
-    </p>
   </section>
 
   <CtaBand title="Like what you see?" description="Get in touch for a free, no-obligation quote on your own project." />

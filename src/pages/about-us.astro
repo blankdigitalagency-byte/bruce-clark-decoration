@@ -5,6 +5,7 @@ import Breadcrumbs from "../components/Breadcrumbs.astro";
 import PhotoPlaceholder from "../components/PhotoPlaceholder.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { business } from "../data/business";
+import aboutPhoto from "../assets/photos/living-room-sage-green-repaint.jpg";
 ---
 
 <Layout
@@ -17,7 +18,12 @@ import { business } from "../data/business";
 
   <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
     <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
-      <PhotoPlaceholder caption="Bruce at work on site" aspect="wide" />
+      <PhotoPlaceholder
+        caption="Recent living room repaint, Edinburgh"
+        aspect="wide"
+        image={aboutPhoto}
+        imageAlt="Sage green living room repaint with fireplace and built-in shelving, Edinburgh"
+      />
       <div>
         <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Our Story</p>
         <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900">{business.yearsExperience} years of Edinburgh decorating</h2>

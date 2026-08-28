@@ -8,6 +8,8 @@ import Faq from "../components/Faq.astro";
 import ServicesGrid from "../components/ServicesGrid.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { services } from "../data/business";
+import wallpaperPhoto from "../assets/photos/wallpaper-mural-feature-wall.jpg";
+import prepPhoto from "../assets/photos/scaffold-interior-preparation.jpg";
 
 const service = services.find((s) => s.slug === "wallpaper-hanging-ames-taping-edinburgh")!;
 ---
@@ -21,13 +23,26 @@ const service = services.find((s) => s.slug === "wallpaper-hanging-ames-taping-e
   <Breadcrumbs crumbs={[{ label: service.shortName, path: `/${service.slug}` }]} />
   <PageHero title={service.name} description={service.summary} />
 
-  <ServiceDetail photoCaption="Wallpaper hanging, Edinburgh interior" heading="Precise, pattern-matched wallpaper hanging" bullets={service.bullets.slice(0, 3)}>
+  <ServiceDetail
+    photoCaption="Wallpaper hanging, Edinburgh interior"
+    heading="Precise, pattern-matched wallpaper hanging"
+    bullets={service.bullets.slice(0, 3)}
+    image={wallpaperPhoto}
+    imageAlt="Botanical mural wallpaper feature wall above a herringbone floor, Edinburgh"
+  >
     <p class="mt-4 text-ink-700/80 leading-relaxed">
       Wallpaper hanging rewards patience — proper lining, careful pattern matching and clean seams are what separate a professional finish from a DIY one. We handle everything from a single feature wall to a full room, including delicate and heavyweight wallcoverings.
     </p>
   </ServiceDetail>
 
-  <ServiceDetail photoCaption="Ames taping, drywall finish" heading="Ames taping for a seamless wall finish" bullets={service.bullets.slice(3)} reverse>
+  <ServiceDetail
+    photoCaption="Interior preparation ahead of a smooth finish"
+    heading="Ames taping for a seamless wall finish"
+    bullets={service.bullets.slice(3)}
+    reverse
+    image={prepPhoto}
+    imageAlt="Scaffold tower set up for interior wall and ceiling preparation, Edinburgh"
+  >
     <p class="mt-4 text-ink-700/80 leading-relaxed">
       Ames taping uses mechanical taping tools to apply joint tape and compound in a single, consistent pass — giving new drywall a smoother, more even finish than hand-taping, particularly over large wall and ceiling areas. It's a specialist skill we're regularly asked for by builders and homeowners alike.
     </p>
