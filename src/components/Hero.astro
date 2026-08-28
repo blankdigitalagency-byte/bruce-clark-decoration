@@ -1,7 +1,7 @@
 ---
 import PhotoPlaceholder from "./PhotoPlaceholder.astro";
 import { business } from "../data/business";
-import heroPhoto from "../assets/photos/staircase-mustard-navy-runner.jpg";
+import heroPhoto from "../assets/photos/bathroom-green-tile-repaint.jpg";
 
 interface Props {
   answerSentence: string;
@@ -16,7 +16,9 @@ const { answerSentence } = Astro.props;
         Residential &amp; Commercial Decorating
       </p>
       <h1 class="mt-5 font-display text-4xl font-semibold leading-[1.15] tracking-tight text-ink-900 sm:text-5xl lg:text-[3.1rem]">
-        Painters &amp; Decorators in Edinburgh, <span class="text-olive-600">Trusted for {business.yearsExperience} Years</span>
+        Painters &amp; Decorators<br />
+        Edinburgh &amp; Lothians or Surrounding Areas<br />
+        <span class="text-olive-600">Trusted for {business.yearsExperience} Years</span>
       </h1>
       <p class="mt-6 max-w-xl text-lg leading-relaxed text-ink-700/85">
         {answerSentence}
@@ -33,10 +35,10 @@ const { answerSentence } = Astro.props;
 
     <div class="relative">
       <PhotoPlaceholder
-        caption="Recent project — interior repaint, Edinburgh"
+        caption="Recent project — bathroom repaint, Edinburgh"
         aspect="wide"
         image={heroPhoto}
-        imageAlt="Freshly painted staircase and hallway with mustard walls, navy stair runner and patterned tiled floor, Edinburgh"
+        imageAlt="Green tiled bathroom repaint with brass fixtures by Bruce Clark Decoration, Edinburgh painters and decorators"
       />
       <div class="absolute bottom-4 left-4 hidden rounded-2xl bg-white p-5 shadow-brand ring-1 ring-black/5 sm:block">
         <p class="font-display text-3xl font-semibold text-olive-600">{business.yearsExperience}</p>

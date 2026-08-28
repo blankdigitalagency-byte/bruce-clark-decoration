@@ -1,0 +1,49 @@
+---
+import { Image } from "astro:assets";
+import staircase from "../assets/photos/staircase-mustard-navy-runner.jpg";
+import kitchen from "../assets/photos/kitchen-mustard-feature-wall.jpg";
+import wallpaper from "../assets/photos/wallpaper-mural-feature-wall.jpg";
+import livingRoom from "../assets/photos/living-room-sage-green-repaint.jpg";
+import bedroom from "../assets/photos/bedroom-wallpaper-chandelier.jpg";
+import entranceHall from "../assets/photos/entrance-hall-staircase-view.jpg";
+
+const photos = [
+  { src: staircase, alt: "Staircase repaint with mustard walls and navy stair runner, Edinburgh" },
+  { src: kitchen, alt: "Kitchen with mustard feature wall repaint, Edinburgh" },
+  { src: wallpaper, alt: "Botanical mural wallpaper feature wall hung by Bruce Clark Decoration" },
+  { src: livingRoom, alt: "Sage green living room repaint with fireplace, Edinburgh" },
+  { src: bedroom, alt: "Bedroom feature wallpaper hanging with chandelier, Edinburgh" },
+  { src: entranceHall, alt: "Repainted staircase and hallway with patterned tiled floor, Edinburgh" },
+];
+---
+
+<section class="bg-white">
+  <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Recent Work</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">A Look at the Finish</h2>
+      <p class="mt-4 text-ink-700/80">A selection of recent painting and decorating projects across Edinburgh</p>
+    </div>
+
+    <div class="mt-12 grid grid-cols-2 gap-4 sm:gap-5 lg:grid-cols-3">
+      {photos.map((p) => (
+        <a href="/gallery" class="group block overflow-hidden rounded-2xl shadow-brand ring-1 ring-black/5">
+          <Image
+            src={p.src}
+            alt={p.alt}
+            width={700}
+            height={700}
+            class="aspect-square w-full object-cover transition duration-500 group-hover:scale-105"
+          />
+        </a>
+      ))}
+    </div>
+
+    <div class="mt-10 text-center">
+      <a href="/gallery" class="inline-flex items-center gap-1.5 rounded-full border-2 border-ink-900/15 px-6 py-3 text-sm font-bold text-ink-900 transition hover:bg-ink-900/5">
+        View Full Gallery
+        <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none"><path d="M3 8h10m0 0L9 4m4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
