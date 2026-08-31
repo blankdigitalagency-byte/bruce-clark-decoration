@@ -8,12 +8,12 @@ import ProcessSteps from "../components/ProcessSteps.astro";
 import RecentWork from "../components/RecentWork.astro";
 import Faq from "../components/Faq.astro";
 import CtaBand from "../components/CtaBand.astro";
-import { business, locations, extraAreas } from "../data/business";
+import { business } from "../data/business";
 
 const homeFaqs = [
   {
     q: "What areas do you cover?",
-    a: `We cover Edinburgh and the Lothians, including ${locations.map((l) => l.name).join(", ")}, plus ${extraAreas.join(", ")} for the right job. Get in touch to confirm coverage for your postcode.`,
+    a: "We cover the whole of Edinburgh and the surrounding areas, and we're happy to travel further for the right job. Get in touch to confirm coverage for your postcode.",
   },
   {
     q: "Do you provide free quotes?",
@@ -36,7 +36,7 @@ const homeFaqs = [
 
 <Layout
   title="Painter & Decorator Edinburgh | Bruce Clark Decoration"
-  description="Bruce Clark Decoration provides residential and commercial painting and decorating across Edinburgh and the Lothians, with 26+ years' experience and a 5.0 Google rating from 28 reviews."
+  description="Bruce Clark Decoration provides residential and commercial painting and decorating across Edinburgh and the Lothians, with 26+ years' experience and a 5-star Google rating."
   path="/"
 >
   <Hero answerSentence={`${business.name} provides tailored residential and commercial painting and decorating across Edinburgh and the Lothians — proper preparation, careful attention to detail and a professional finish on every job, backed by over ${business.yearsExperience.replace("+", "")} years' experience.`} />
@@ -54,17 +54,7 @@ const homeFaqs = [
         All of Edinburgh <span class="text-olive-600">&amp; the Lothians</span>
       </h2>
       <p class="mt-4 text-lg text-ink-700/80">
-        We're not limited to a handful of postcodes — we cover the whole of Edinburgh and the surrounding Lothians, from tenement flats to detached villas, and we'll happily travel further for the right job.
-      </p>
-      <p class="mt-6 text-sm text-ink-700/70">
-        We've built up particular local knowledge in areas including{" "}
-        {locations.map((l, i) => (
-          <>
-            <a href={`/decorator-in-${l.slug}-edinburgh`} class="font-medium text-olive-700 underline underline-offset-2 hover:text-olive-800">{l.name}</a>
-            {i < locations.length - 1 ? ", " : ""}
-          </>
-        ))}
-        {" "}— plus {extraAreas.join(", ")}.
+        We're not limited to a handful of postcodes — we cover the whole of Edinburgh and the surrounding areas, from tenement flats to detached villas, and we'll happily travel further for the right job.
       </p>
     </div>
   </section>

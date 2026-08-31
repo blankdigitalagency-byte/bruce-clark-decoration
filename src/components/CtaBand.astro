@@ -10,7 +10,6 @@ const {
   description = "Get in touch today for a free, no-obligation quote — every job is priced individually, so you'll always know exactly what to expect.",
 } = Astro.props;
 
-const points = ["Fast, friendly response", "Clear, honest pricing", "Tidy, considerate work"];
 const titleWords = title.trim().split(" ");
 const titleLastWord = titleWords.pop();
 const titleLead = titleWords.join(" ");
@@ -22,15 +21,6 @@ const titleLead = titleWords.join(" ");
       {titleLead}{titleLead && " "}<span class="text-olive-400">{titleLastWord}</span>
     </h2>
     <p class="mx-auto mt-4 max-w-xl text-white/75">{description}</p>
-
-    <ul class="mx-auto mt-8 flex max-w-xl flex-col justify-center gap-3 sm:flex-row sm:gap-6">
-      {points.map((p) => (
-        <li class="flex items-center justify-center gap-2 text-sm font-medium text-white/90">
-          <svg class="h-4 w-4 text-olive-400" viewBox="0 0 20 20" fill="none"><path d="M16 6 8 14l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          {p}
-        </li>
-      ))}
-    </ul>
 
     <div class="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
       <a href="/contact" class="inline-flex items-center justify-center gap-2 rounded-full bg-olive-500 px-7 py-3.5 text-sm font-bold text-white transition hover:bg-olive-400">

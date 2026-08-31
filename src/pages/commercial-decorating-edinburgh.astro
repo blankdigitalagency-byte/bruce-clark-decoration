@@ -7,9 +7,17 @@ import ServiceDetail from "../components/ServiceDetail.astro";
 import Faq from "../components/Faq.astro";
 import ServicesGrid from "../components/ServicesGrid.astro";
 import CtaBand from "../components/CtaBand.astro";
+import Icon from "../components/Icon.astro";
 import { services } from "../data/business";
 
 const service = services.find((s) => s.slug === "commercial-decorating-edinburgh")!;
+
+const sectors = [
+  { icon: "building" as const, title: "Offices & Retail", desc: "Reception areas, open-plan offices and shop units, decorated with minimal disruption to your working week." },
+  { icon: "roller" as const, title: "Rental & Let Properties", desc: "Turnaround decorating between tenancies for landlords and letting agents, scheduled to fit tight void periods." },
+  { icon: "brush" as const, title: "Communal Areas", desc: "Stairwells and shared spaces in tenement and commercial buildings, coordinated with factors and building managers." },
+  { icon: "wallpaper" as const, title: "Hospitality & Trade", desc: "Hair and beauty salons, hospitality venues and other trade premises, often worked out of hours to avoid closing." },
+];
 ---
 
 <Layout
@@ -21,11 +29,31 @@ const service = services.find((s) => s.slug === "commercial-decorating-edinburgh
   <Breadcrumbs crumbs={[{ label: service.shortName, path: `/${service.slug}` }]} />
   <PageHero title={service.name} description={service.summary} />
 
-  <ServiceDetail photoCaption="Commercial decorating, Edinburgh premises" heading="Minimal disruption, maximum quality" bullets={service.bullets}>
+  <ServiceDetail photoCaption="Commercial decorating, Edinburgh premises" heading="Working Around Your Business" bullets={service.bullets}>
     <p class="mt-4 text-ink-700/80 leading-relaxed">
-      We know a business can't always stop for decorating work. We schedule around your trading hours where needed, use durable paint systems suited to high-traffic areas, and leave the space clean and ready to use.
+      A business can't always stop for decorating work, so we plan around what suits you — evenings, weekends or a phased schedule across a larger site. We use paint systems suited to high-traffic commercial areas, and leave the space clean and ready to use as soon as we're finished.
     </p>
   </ServiceDetail>
+
+  <section class="bg-olive-50/50">
+    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Commercial Work</p>
+        <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">The Premises We Cover</h2>
+      </div>
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        {sectors.map((s) => (
+          <div class="rounded-2xl bg-white p-7 shadow-sm ring-1 ring-black/5">
+            <span class="flex h-12 w-12 items-center justify-center rounded-xl bg-olive-600 text-white">
+              <Icon name={s.icon} class="h-6 w-6" />
+            </span>
+            <h3 class="mt-5 font-display text-lg font-bold text-ink-900">{s.title}</h3>
+            <p class="mt-2.5 text-sm leading-relaxed text-ink-700/75">{s.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 
   <Faq faqs={service.faqs} title="Commercial Decorating: Common Questions" />
   <ServicesGrid currentSlug={service.slug} />

@@ -57,24 +57,24 @@ export const services: ServiceDef[] = [
     summary:
       "Interior painting, preparation and wallpaper hanging for Edinburgh homes — from a single room refresh to a full property redecoration.",
     metaDescription:
-      "Residential decorator in Edinburgh for interior painting, preparation and wallpaper hanging. 26+ years' experience, 5.0 rating. Get in touch for a free quote.",
+      "Residential decorator in Edinburgh for interior painting, preparation and wallpaper hanging. 26+ years' experience, 5-star Google rating. Get in touch for a free quote.",
     icon: "brush",
     bullets: [
       "Interior painting for every room, in any finish",
       "Thorough surface preparation — filling, sanding, sealing",
       "Wallpaper hanging (see our dedicated Specialist Finishes page for full detail)",
       "Ceiling, cornice and woodwork painting",
-      "Colour consultation to help you choose the right scheme",
+      "Advice on colours and finishes where required",
       "Dust sheets, protection and a clean, tidy finish every time",
     ],
     faqs: [
       {
         q: "Do you move furniture and cover flooring before starting?",
-        a: "Yes. We protect flooring, furniture and fittings with dust sheets before any work begins, and move what we can to give a clear working area, restoring the room afterwards.",
+        a: "Yes. We ask customers to remove small and personal items beforehand, and we take care of the rest — protecting furniture, floors and surrounding areas with polythene and dust sheets before any work begins.",
       },
       {
         q: "How long does an average room take?",
-        a: "A standard room typically takes one to two days including preparation, depending on wall condition and the finish chosen. We'll give you an accurate timescale after seeing the job.",
+        a: "It depends on the amount of preparation and work involved — every job is different, so we'll give you an accurate timescale after seeing the room rather than a generic figure.",
       },
       {
         q: "Can you match Edinburgh tenement and period property features?",
@@ -88,9 +88,9 @@ export const services: ServiceDef[] = [
     shortName: "Exterior Painting",
     navLabel: "Exterior Painting & Decorating",
     summary:
-      "Weatherproof exterior painting and decorating for Edinburgh's tenements, villas and render — prepared and finished to last through Scottish weather.",
+      "Exterior painting and decorating for Edinburgh's tenements, villas and render, prepared thoroughly to suit the surface and its exposure.",
     metaDescription:
-      "Exterior painter and decorator in Edinburgh. Harling, render, sandstone and woodwork painted to a weatherproof finish. 26+ years' experience. Free quotes.",
+      "Exterior painter and decorator in Edinburgh. Harling, render, sandstone and woodwork painted to a durable, professional finish. 26+ years' experience. Free quotes.",
     icon: "building",
     bullets: [
       "Render, harling and sandstone painting",
@@ -110,8 +110,8 @@ export const services: ServiceDef[] = [
         a: "Yes, we regularly coordinate with factors and other owners on shared tenement exteriors and common stair painting across Edinburgh.",
       },
       {
-        q: "How long does exterior paint last in Edinburgh's weather?",
-        a: "With correct preparation and a quality weatherproof system, a well-executed exterior repaint typically lasts 8–10 years before it needs attention again, depending on aspect and exposure.",
+        q: "How long will my exterior paint job last?",
+        a: "It depends on the surface, aspect, exposure and condition of what's underneath, so we won't quote a blanket figure — we'll advise on realistic expectations for your specific property once we've seen the job.",
       },
     ],
   },
@@ -128,15 +128,15 @@ export const services: ServiceDef[] = [
     bullets: [
       "Wallpaper hanging — pattern matching, feature walls, full rooms",
       "Lining paper preparation for a smooth, long-lasting finish",
-      "Ames taping — mechanical drywall taping and jointing for a seamless, professional wall and ceiling finish",
+      "Ames taping — machine and hand taping and jointing, whichever suits the job, for a seamless wall and ceiling finish",
       "Textured, heavyweight and delicate wallcoverings handled with care",
       "Coordination with plasterers and joiners on new-build and renovation jobs",
-      "Repairs and re-hangs where previous paperwork has failed",
+      "Repairs and re-hangs where previous wallpaper has failed",
     ],
     faqs: [
       {
         q: "What is Ames taping?",
-        a: "Ames taping uses mechanical taping tools to apply joint tape and compound to drywall seams in a single, consistent pass — giving a smoother, more even finish than hand-taping, especially over large wall and ceiling areas.",
+        a: "Ames taping refers to taping and jointing drywall seams ready for a smooth painted finish. We use both mechanical taping tools and traditional hand taping depending on the job, and we'll choose whichever's right for your walls and ceilings rather than defaulting to one method.",
       },
       {
         q: "Can you hang patterned or textured wallpaper?",
@@ -162,9 +162,11 @@ export const services: ServiceDef[] = [
       "Offices, retail units and reception areas",
       "Communal stairwells and tenement common areas",
       "Rental and let property redecoration between tenancies",
+      "Hospitality, hair and beauty, and other trade premises",
       "Out-of-hours and weekend scheduling to avoid disrupting trading",
       "Durable, high-traffic-suited paint systems",
-      "Working alongside factors, landlords and letting agents",
+      "Minimal-disruption planning around staff, stock and customers",
+      "Working alongside factors, landlords, letting agents and other contractors",
     ],
     faqs: [
       {
@@ -178,6 +180,14 @@ export const services: ServiceDef[] = [
       {
         q: "Can you quote for a multi-unit or repeat contract?",
         a: "Yes, get in touch with the details and we'll put together a quote for ongoing or multi-property work.",
+      },
+      {
+        q: "Can you work alongside our own contractors or maintenance team?",
+        a: "Yes, on larger commercial jobs we regularly coordinate with other trades, building managers and maintenance teams to fit around the wider schedule.",
+      },
+      {
+        q: "Do you sign NDAs or site inductions for commercial clients?",
+        a: "Yes, where a site requires an induction, method statement or confidentiality agreement before work starts, we're happy to complete whatever's needed.",
       },
     ],
   },
@@ -200,7 +210,7 @@ export const locations: LocationDef[] = [
     slug: "the-grange",
     name: "The Grange",
     metaDescription:
-      "Decorator covering The Grange, Edinburgh. Interior and exterior painting for Victorian villas and townhouses. 26+ years' experience, 5.0 rating.",
+      "Decorator covering The Grange, Edinburgh. Interior and exterior painting for Victorian villas and townhouses. 26+ years' experience, 5-star Google rating.",
     intro:
       "The Grange is one of Edinburgh's most distinctive conservation areas, its large Victorian villas set behind stone walls and mature gardens. Decorating work here tends to involve generously proportioned rooms, high ceilings and original period detailing that rewards careful, patient preparation.",
     landmarks: ["Grange Road", "Blackford Hill", "The Meadows", "St Giles' Cathedral (nearby city views)"],
@@ -221,7 +231,7 @@ export const locations: LocationDef[] = [
     slug: "new-town",
     name: "New Town",
     metaDescription:
-      "Decorator covering Edinburgh's New Town. Interior and exterior painting for Georgian flats and townhouses. 26+ years' experience, 5.0 rating.",
+      "Decorator covering Edinburgh's New Town. Interior and exterior painting for Georgian flats and townhouses. 26+ years' experience, 5-star Google rating.",
     intro:
       "Edinburgh's New Town is a UNESCO World Heritage site of Georgian terraces and elegant flats, and decorating within it means working to a standard that respects the architecture — tall ceilings, deep cornicing, and often shared common stairs.",
     landmarks: ["Princes Street Gardens", "Charlotte Square", "George Street", "Scotland Street"],
@@ -242,7 +252,7 @@ export const locations: LocationDef[] = [
     slug: "merchiston",
     name: "Merchiston",
     metaDescription:
-      "Decorator covering Merchiston, Edinburgh. Interior and exterior painting for Victorian terraces and family homes. 26+ years' experience, 5.0 rating.",
+      "Decorator covering Merchiston, Edinburgh. Interior and exterior painting for Victorian terraces and family homes. 26+ years' experience, 5-star Google rating.",
     intro:
       "Merchiston's leafy streets of Victorian terraces and villas, close to Napier University and Bruntsfield, see a steady mix of family home refreshes and larger period property projects.",
     landmarks: ["Merchiston Avenue", "Colinton Road", "Napier University", "Harrison Park"],
@@ -263,7 +273,7 @@ export const locations: LocationDef[] = [
     slug: "morningside",
     name: "Morningside",
     metaDescription:
-      "Decorator covering Morningside, Edinburgh. Interior and exterior painting for Victorian villas and tenement flats. 26+ years' experience, 5.0 rating.",
+      "Decorator covering Morningside, Edinburgh. Interior and exterior painting for Victorian villas and tenement flats. 26+ years' experience, 5-star Google rating.",
     intro:
       "Morningside's mix of Victorian villas, tenement flats and traditional shopfronts along Morningside Road means our work here spans everything from period interior redecoration to exterior refreshes on well-loved family homes.",
     landmarks: ["Morningside Road", "Braid Hills", "Comiston", "Church Hill"],
@@ -284,7 +294,7 @@ export const locations: LocationDef[] = [
     slug: "colinton",
     name: "Colinton",
     metaDescription:
-      "Decorator covering Colinton, Edinburgh. Interior and exterior painting for village homes and cottages. 26+ years' experience, 5.0 rating.",
+      "Decorator covering Colinton, Edinburgh. Interior and exterior painting for village homes and cottages. 26+ years' experience, 5-star Google rating.",
     intro:
       "Colinton's village character, with its stone cottages, converted mill buildings and family homes near the Water of Leith, calls for decorating work that's sympathetic to older, characterful properties as much as it is efficient for busy households.",
     landmarks: ["Colinton Village", "Water of Leith Walkway", "Bonaly", "Redford Road"],
@@ -297,7 +307,7 @@ export const locations: LocationDef[] = [
       },
       {
         q: "Can you help with exterior woodwork on older Colinton homes?",
-        a: "Yes, exterior woodwork — doors, windows, fascias — on older Colinton properties is work we take on regularly, prepared to withstand Scottish weather.",
+        a: "Yes, exterior woodwork — doors, windows, fascias — on older Colinton properties is work we take on regularly, prepared thoroughly to suit the property's exposure.",
       },
     ],
   },
@@ -305,7 +315,7 @@ export const locations: LocationDef[] = [
     slug: "stockbridge",
     name: "Stockbridge",
     metaDescription:
-      "Decorator covering Stockbridge, Edinburgh. Interior and exterior painting for tenement flats near the Water of Leith. 26+ years' experience, 5.0 rating.",
+      "Decorator covering Stockbridge, Edinburgh. Interior and exterior painting for tenement flats near the Water of Leith. 26+ years' experience, 5-star Google rating.",
     intro:
       "Stockbridge's tenement flats around Raeburn Place and St Stephen Street are some of the most characterful properties we work on — full of original detail, and often recently renovated by owners wanting a considered, well-finished interior.",
     landmarks: ["Raeburn Place", "St Stephen Street", "Water of Leith", "Deanhaugh Street"],

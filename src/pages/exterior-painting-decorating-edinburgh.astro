@@ -24,17 +24,17 @@ const service = services.find((s) => s.slug === "exterior-painting-decorating-ed
 
   <ServiceDetail
     photoCaption="Exterior repaint, Edinburgh property"
-    heading="Weatherproof exteriors built to last"
+    heading="How We Approach Exterior Painting"
     bullets={service.bullets}
     image={servicePhoto}
     imageAlt="Freshly painted navy front door on a sandstone Edinburgh tenement"
   >
     <p class="mt-4 text-ink-700/80 leading-relaxed">
-      Edinburgh's exteriors — render, harling, sandstone and traditional woodwork — take a battering from Scottish weather, so proper preparation matters more outside than almost anywhere else. We wash down, repair and prime before a single coat of finish goes on, using paint systems suited to the surface and its exposure.
+      Edinburgh's exteriors — render, harling, sandstone and traditional woodwork — need thorough preparation to suit Edinburgh's climate. We wash down, repair and prime before any finish goes on, using paint systems suited to the surface and its exposure.
     </p>
   </ServiceDetail>
 
   <Faq faqs={service.faqs} title="Exterior Painting: Common Questions" />
   <ServicesGrid currentSlug={service.slug} />
-  <CtaBand title="Ready for a weatherproof exterior?" description="Get in touch for a free, no-obligation quote on your exterior painting project." />
+  <CtaBand title="Thinking about your exterior?" description="Get in touch for a free, no-obligation quote on your exterior painting project." />
 </Layout>
