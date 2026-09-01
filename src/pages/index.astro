@@ -6,6 +6,7 @@ import ServicesGrid from "../components/ServicesGrid.astro";
 import ValuesSection from "../components/ValuesSection.astro";
 import ProcessSteps from "../components/ProcessSteps.astro";
 import RecentWork from "../components/RecentWork.astro";
+import Testimonials from "../components/Testimonials.astro";
 import Faq from "../components/Faq.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { business } from "../data/business";
@@ -60,5 +61,6 @@ const homeFaqs = [
   </section>
 
   <Faq faqs={homeFaqs} subtitle="Straight answers to the questions Edinburgh homeowners and businesses ask us most." />
+  <Testimonials background="olive" />
   <CtaBand />
 </Layout>

@@ -1,0 +1,37 @@
+---
+import ReviewSchema from "./ReviewSchema.astro";
+import { reviews } from "../data/business";
+
+interface Props {
+  background?: "white" | "olive";
+}
+const { background = "white" } = Astro.props;
+---
+
+{reviews.length > 0 && (
+  <section class={background === "olive" ? "bg-olive-50/50" : "bg-white"}>
+    <ReviewSchema />
+    <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-2xl text-center">
+        <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Reviews</p>
+        <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">
+          What Our Customers <span class="text-olive-600">Say</span>
+        </h2>
+      </div>
+
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {reviews.map((r) => (
+          <div class="flex flex-col rounded-2xl bg-white p-7 shadow-sm ring-1 ring-black/5">
+            <div class="flex items-center gap-1 text-gold-500">
+              {Array.from({ length: r.rating }).map(() => (
+                <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.9L12 17.8 5.8 21l1.2-6.9-5-4.9 6.9-1L12 2Z" /></svg>
+              ))}
+            </div>
+            <p class="mt-4 flex-1 text-sm leading-relaxed text-ink-700/85">&ldquo;{r.text}&rdquo;</p>
+            <p class="mt-5 font-display text-sm font-bold text-ink-900">{r.author}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+)}

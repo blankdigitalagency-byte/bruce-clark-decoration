@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import PageHero from "../components/PageHero.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 import PhotoPlaceholder from "../components/PhotoPlaceholder.astro";
+import Testimonials from "../components/Testimonials.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { business } from "../data/business";
 import aboutPhoto from "../assets/photos/living-room-sage-green-repaint.jpg";
@@ -28,13 +29,13 @@ import aboutPhoto from "../assets/photos/living-room-sage-green-repaint.jpg";
         <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Our Story</p>
         <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900">{business.yearsExperience} years of Edinburgh decorating</h2>
         <p class="mt-5 leading-relaxed text-ink-700/80">
-          I've been painting and decorating in and around Edinburgh for over 26 years now, and in that time I've worked on everything from a single-room refresh to full interior and exterior projects across the city — tenement flats in Stockbridge, Georgian properties in the New Town, family homes in Morningside and Merchiston, and commercial units in between.
+          We've been painting and decorating in and around Edinburgh for over 26 years now, and in that time we've worked on everything from a single-room refresh to full interior and exterior projects across the city — tenement flats in Stockbridge, Georgian properties in the New Town, family homes in Morningside and Merchiston, and commercial units in between.
         </p>
         <p class="mt-4 leading-relaxed text-ink-700/80">
-          I keep things straightforward: turn up when I say I will, protect your home or premises, and leave the job clean and tidy. That approach is, I think, the reason so many clients call me back for the next job or pass my name on to someone else.
+          We keep things straightforward: turn up when we say we will, protect your home or premises, and leave the job clean and tidy. That approach is, we think, the reason so many clients call us back for the next job or pass our name on to someone else.
         </p>
         <p class="mt-4 leading-relaxed text-ink-700/80">
-          That word-of-mouth reputation is reflected in a five-star rating on Google — something I'm genuinely proud of after 26+ years in the trade.
+          That word-of-mouth reputation is reflected in a five-star rating on Google — something we're genuinely proud of after 26+ years in the trade.
         </p>
       </div>
     </div>
@@ -69,6 +70,8 @@ import aboutPhoto from "../assets/photos/living-room-sage-green-repaint.jpg";
       )}
     </div>
   </section>
+
+  <Testimonials />
 
   <CtaBand />
 </Layout>
