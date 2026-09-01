@@ -34,7 +34,23 @@ export const business = {
 // TODO(client): supply 3-6 real quotes from actual Google reviews (with the reviewer's first
 // name) to power the testimonials section and Review schema. Do not fabricate reviews — leave
 // this empty until real quotes are provided; the aggregate 5.0/28 rating is shown regardless.
-export const reviews: { author: string; rating: number; text: string }[] = [];
+export const reviews: { author: string; rating: number; text: string }[] = [
+  {
+    author: "Claire",
+    rating: 5,
+    text: "We've had Bruce do decoration work for us a number of times and we're always over the moon with his work. The work is always to a high standard and he leaves the place spotless afterwards. We wouldn't trust anyone else to do this work for us. He's also got really good ideas on some things that we wouldn't have thought of — e.g. painting our bannister the same colour as the walls, which makes it really stand out and we always get compliments on it.",
+  },
+  {
+    author: "Kenny",
+    rating: 5,
+    text: "Bruce and his team decorated our home after a major building upgrade this year, and it was a pleasure to deal with them from the initial estimate to the finish. They are completely trustworthy and very customer-focussed to ensure that you are 100% happy with the quality of the work that they do. Bruce's knowledge of the trade is second-to-none, and he has all the necessary tools and skills to make sure he provides great results — whether that's vacuum sanding or paint spraying, all made possible by him investing in the latest technology and paints. I have absolutely no qualms in giving Bruce Clark Decoration a 5-star review, and recommending them to you!",
+  },
+  {
+    author: "Emma",
+    rating: 5,
+    text: "Bruce has decorated every room in our house to the highest standard. He is trustworthy, has meticulous attention to detail and always provides tips on what looks best (e.g. slightly off-white skirtings in our newly decorated pink room, so as not to make it appear a yellowish colour). Always easy to get a hold of and makes space where he can to accommodate our needs.",
+  },
+];
 
 export type ServiceDef = {
   slug: string;
