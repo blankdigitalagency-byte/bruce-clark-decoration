@@ -1,7 +1,7 @@
 export const business = {
   name: "Bruce Clark Decoration",
   shortName: "Bruce Clark",
-  tagline: "Painters & Decorators in Edinburgh",
+  tagline: "High-End Painters & Decorators in Edinburgh",
   phoneDisplay: "07591 141732",
   phoneHref: "tel:07591141732",
   // TODO(client): confirm a public enquiries email address, or remove email contact method if he prefers phone/form only.
@@ -71,9 +71,9 @@ export const services: ServiceDef[] = [
     shortName: "Residential Decorating",
     navLabel: "Residential Decorating",
     summary:
-      "Interior painting, preparation and wallpaper hanging for Edinburgh homes — from a single room refresh to a full property redecoration.",
+      "High-end interior painting, meticulous preparation and expert wallpaper hanging for Edinburgh homes — from a single room refresh to a full property transformation.",
     metaDescription:
-      "Residential decorator in Edinburgh for interior painting, preparation and wallpaper hanging. 26+ years' experience, 5-star Google rating. Get in touch for a free quote.",
+      "High-end residential decorator in Edinburgh for interior painting, preparation and wallpaper hanging. 26+ years' experience, 5-star Google rating. Get in touch for a free quote.",
     icon: "brush",
     bullets: [
       "Interior painting for every room, in any finish",
@@ -104,9 +104,9 @@ export const services: ServiceDef[] = [
     shortName: "Exterior Painting",
     navLabel: "Exterior Painting & Decorating",
     summary:
-      "Exterior painting and decorating for Edinburgh's tenements, villas and render, prepared thoroughly to suit the surface and its exposure.",
+      "High-end exterior painting and decorating for Edinburgh's tenements, villas and render — an exacting finish prepared to suit the surface and its exposure.",
     metaDescription:
-      "Exterior painter and decorator in Edinburgh. Harling, render, sandstone and woodwork painted to a durable, professional finish. 26+ years' experience. Free quotes.",
+      "High-end exterior painter and decorator in Edinburgh. Harling, render, sandstone and woodwork finished to an exacting standard. 26+ years' experience. Free quotes.",
     icon: "building",
     bullets: [
       "Render, harling and sandstone painting",
@@ -137,9 +137,9 @@ export const services: ServiceDef[] = [
     shortName: "Specialist Finishes",
     navLabel: "Specialist Finishes",
     summary:
-      "Professional wallpaper hanging and Ames taping (drywall taping and jointing) across Edinburgh — precise, seamless finishes for demanding interiors.",
+      "Expert wallpaper hanging and Ames taping (drywall taping and jointing) across Edinburgh — precise, seamless finishes for the city's finest interiors.",
     metaDescription:
-      "Wallpaper hanging and Ames taping in Edinburgh. Precise pattern-matched wallpaper installation and seamless drywall taping and jointing. 26+ years' experience.",
+      "High-end wallpaper hanging and Ames taping in Edinburgh. Precise pattern-matched wallpaper installation and seamless drywall taping and jointing. 26+ years' experience.",
     icon: "wallpaper",
     bullets: [
       "Wallpaper hanging — pattern matching, feature walls, full rooms",
@@ -170,9 +170,9 @@ export const services: ServiceDef[] = [
     shortName: "Commercial Decorating",
     navLabel: "Commercial Decorating",
     summary:
-      "Painting and decorating for Edinburgh offices, shops, stairwells and rental properties — scheduled around your business to minimise disruption.",
+      "High-end painting and decorating for Edinburgh offices, retail and hospitality spaces — a premium finish delivered with scheduling that minimises disruption to your business.",
     metaDescription:
-      "Commercial decorator in Edinburgh for offices, retail, stairwells and rental properties. Flexible scheduling, minimal disruption. 26+ years' experience.",
+      "High-end commercial decorator in Edinburgh for offices, retail, stairwells and rental properties. Flexible scheduling, minimal disruption. 26+ years' experience.",
     icon: "building",
     bullets: [
       "Offices, retail units and reception areas",
