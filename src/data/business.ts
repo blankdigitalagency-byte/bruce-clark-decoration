@@ -179,15 +179,15 @@ export const services: ServiceDef[] = [
       "Communal stairwells and tenement common areas",
       "Rental and let property redecoration between tenancies",
       "Hospitality, hair and beauty, and other trade premises",
-      "Out-of-hours and weekend scheduling to avoid disrupting trading",
+      "Flexible scheduling to minimise disruption to your trading",
       "Durable, high-traffic-suited paint systems",
       "Minimal-disruption planning around staff, stock and customers",
       "Working alongside factors, landlords, letting agents and other contractors",
     ],
     faqs: [
       {
-        q: "Can you work outside business hours?",
-        a: "Yes, we regularly schedule commercial and let-property work in the evenings or over weekends so it doesn't interrupt trading or tenancy.",
+        q: "Can you work around our business hours?",
+        a: "Yes, we plan commercial and let-property work around what suits you, so it fits with trading or tenancy turnaround rather than the other way round.",
       },
       {
         q: "Do you work with letting agents and factors directly?",
