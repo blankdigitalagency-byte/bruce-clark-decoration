@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import benjaminMoore from "../assets/brands/benjamin-moore.png";
 import farrowAndBall from "../assets/brands/farrow-and-ball.png";
 import littleGreene from "../assets/brands/little-greene.png";
 import coat from "../assets/brands/coat.png";
@@ -9,12 +10,13 @@ import paintAndPaperLibrary from "../assets/brands/paint-and-paper-library.png";
 import zinsser from "../assets/brands/zinsser.png";
 
 const logos = [
+  { name: "Benjamin Moore", src: benjaminMoore },
   { name: "Farrow & Ball", src: farrowAndBall },
   { name: "Little Greene", src: littleGreene },
   { name: "COAT", src: coat },
   { name: "Crown", src: crown },
   { name: "Dulux", src: dulux },
-  { name: "Paint & Paper Library", src: paintAndPaperLibrary },
+  { name: "Paint & Paper Library", src: paintAndPaperLibrary, big: true },
   { name: "Zinsser", src: zinsser },
 ];
 ---
@@ -27,20 +29,20 @@ const logos = [
         Materials We <span class="text-olive-600">Trust</span>
       </h2>
       <p class="mt-4 text-ink-700/80">
-        We work with a range of trade and premium paint brands, choosing whichever suits the job and the finish you're after. Benjamin Moore has become one of our go-to paints for its depth of colour and quality of finish — it costs a little more than some alternatives, but in our experience it's well worth considering for the right room or project.
+        We work with a range of trade and premium paint brands, choosing whichever suits the job and the finish you're after. Benjamin Moore is one of our particular favourites for its depth of colour and quality of finish.
       </p>
     </div>
 
     <div class="mt-12 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
-      <div class="group flex h-14 items-center justify-center">
-        <span class="font-display text-lg font-bold text-ink-900 opacity-80 transition group-hover:opacity-100">Benjamin Moore</span>
-      </div>
       {logos.map((l) => (
-        <div class="group flex h-14 items-center justify-center">
+        <div class="group flex h-20 items-center justify-center">
           <Image
             src={l.src}
             alt={`${l.name} paint`}
-            class="max-h-14 w-auto max-w-[9rem] object-contain opacity-70 transition duration-200 group-hover:scale-105 group-hover:opacity-100"
+            class:list={[
+              "w-auto object-contain opacity-70 transition duration-200 group-hover:scale-105 group-hover:opacity-100",
+              l.big ? "max-h-20 max-w-[11rem]" : "max-h-14 max-w-[9rem]",
+            ]}
           />
         </div>
       ))}
