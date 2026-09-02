@@ -40,9 +40,9 @@ export const reviews: { author: string; rating: number; text: string }[] = [
     text: "We've had Bruce do decoration work for us a number of times and we're always over the moon with his work. The work is always to a high standard and he leaves the place spotless afterwards. We wouldn't trust anyone else to do this work for us. He's also got really good ideas on some things that we wouldn't have thought of — e.g. painting our bannister the same colour as the walls, which makes it really stand out and we always get compliments on it.",
   },
   {
-    author: "Kenny",
+    author: "Elaine",
     rating: 5,
-    text: "Bruce and his team decorated our home after a major building upgrade this year, and it was a pleasure to deal with them from the initial estimate to the finish. They are completely trustworthy and very customer-focussed to ensure that you are 100% happy with the quality of the work that they do. Bruce's knowledge of the trade is second-to-none, and he has all the necessary tools and skills to make sure he provides great results — whether that's vacuum sanding or paint spraying, all made possible by him investing in the latest technology and paints. I have absolutely no qualms in giving Bruce Clark Decoration a 5-star review, and recommending them to you!",
+    text: "Extremely delighted with the finish and professional standard from Bruce Clark Decoration, their attention to detail is quite incredible. They did exactly what my wife and I wanted. They cleaned everything and put all our furniture back when they were finished. No mess at all. Brilliant job. Always on time, happy, friendly. Excellent. Great price. We have recommended Bruce Clark Decoration to all our friends and family.",
   },
   {
     author: "Emma",
