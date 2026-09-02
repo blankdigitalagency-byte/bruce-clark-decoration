@@ -1,0 +1,34 @@
+---
+const brands = [
+  "Benjamin Moore",
+  "Farrow & Ball",
+  "Little Greene",
+  "COAT",
+  "Crown",
+  "Dulux",
+  "Paint & Paper Library",
+  "Zinsser",
+];
+---
+
+<section class="bg-cream-100">
+  <div class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Paints We Use</p>
+      <h2 class="mt-2 font-display text-3xl font-semibold tracking-tight text-ink-900 sm:text-4xl">
+        Materials We <span class="text-olive-600">Trust</span>
+      </h2>
+      <p class="mt-4 text-ink-700/80">
+        We work with a range of trade and premium paint brands, choosing whichever suits the job and the finish you're after. Benjamin Moore has become one of our go-to paints for its depth of colour and quality of finish — it costs a little more than some alternatives, but in our experience it's well worth considering for the right room or project.
+      </p>
+    </div>
+
+    <div class="mt-12 flex flex-wrap items-center justify-center gap-3">
+      {brands.map((b) => (
+        <span class="rounded-full border border-black/10 bg-white px-5 py-2.5 font-display text-sm font-semibold text-ink-900 shadow-sm">
+          {b}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>

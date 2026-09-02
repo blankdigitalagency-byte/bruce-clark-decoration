@@ -5,13 +5,14 @@ import { business } from "../data/business";
 const points = [
   { icon: "clock" as const, title: `${business.yearsExperience} years' experience`, desc: "Edinburgh's premium decorating specialist", badge: "bg-olive-600" },
   { icon: "star" as const, title: "5 Star Google Rating", desc: "Rated by Edinburgh customers", badge: "bg-gold-500" },
+  { icon: "shield" as const, title: "Fully Insured", desc: "Public liability cover in place", badge: "bg-olive-600" },
   { icon: "brush" as const, title: "Free, no-obligation quotes", desc: "Every job priced individually", badge: "bg-olive-600" },
 ];
 ---
 
 <section class="bg-white py-14 sm:py-16">
   <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-    <div class="grid gap-4 rounded-2xl bg-white p-2 sm:grid-cols-3 sm:gap-0 sm:divide-x sm:divide-black/5 sm:rounded-2xl sm:border sm:border-black/5 sm:p-0 sm:shadow-brand">
+    <div class="grid gap-4 rounded-2xl bg-white p-2 sm:grid-cols-2 sm:gap-0 sm:divide-x sm:divide-y sm:divide-black/5 sm:rounded-2xl sm:border sm:border-black/5 sm:p-0 sm:shadow-brand lg:grid-cols-4 lg:divide-y-0">
       {points.map((p) => (
         <div class="flex items-center gap-4 rounded-xl border border-black/5 bg-white p-5 shadow-sm sm:rounded-none sm:border-0 sm:bg-transparent sm:p-7 sm:shadow-none">
           <span class:list={["flex h-11 w-11 shrink-0 items-center justify-center rounded-full text-white", p.badge]}>
