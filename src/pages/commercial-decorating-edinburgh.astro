@@ -9,6 +9,7 @@ import ServicesGrid from "../components/ServicesGrid.astro";
 import CtaBand from "../components/CtaBand.astro";
 import Icon from "../components/Icon.astro";
 import { services } from "../data/business";
+import communalStairPhoto from "../assets/photos/communal-stair-mustard-terracotta.jpg";
 
 const service = services.find((s) => s.slug === "commercial-decorating-edinburgh")!;
 
@@ -29,7 +30,13 @@ const sectors = [
   <Breadcrumbs crumbs={[{ label: service.shortName, path: `/${service.slug}` }]} />
   <PageHero title={service.name} description={service.summary} />
 
-  <ServiceDetail photoCaption="Commercial decorating, Edinburgh premises" heading="Working Around Your Business" bullets={service.bullets}>
+  <ServiceDetail
+    photoCaption="Communal stairwell repaint, Edinburgh tenement"
+    heading="Working Around Your Business"
+    bullets={service.bullets}
+    image={communalStairPhoto}
+    imageAlt="Repainted communal tenement stairwell with mustard and terracotta colour scheme, Edinburgh"
+  >
     <p class="mt-4 text-ink-700/80 leading-relaxed">
       A business can't always stop for decorating work, so we plan around what suits you — whether that means working in stages or around your quieter periods. We use paint systems suited to high-traffic commercial areas, and leave the space immaculate and ready to use as soon as we're finished.
     </p>

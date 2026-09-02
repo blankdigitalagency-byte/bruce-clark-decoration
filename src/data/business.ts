@@ -79,6 +79,7 @@ export const services: ServiceDef[] = [
       "Thorough surface preparation — filling, sanding, sealing",
       "Wallpaper hanging (see our dedicated Specialist Finishes page for full detail)",
       "Ceiling, cornice and woodwork painting",
+      "Hand-painted fitted wardrobes and bespoke furniture",
       "Advice on colours and finishes where required",
       "Dust sheets, protection and a clean, tidy finish every time",
     ],
