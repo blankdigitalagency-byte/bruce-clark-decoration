@@ -6,16 +6,14 @@ import Faq from "../components/Faq.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { business } from "../data/business";
 
-// TODO(client): confirm public liability insurance so the answer below can state it directly.
-// Until confirmed, this deliberately avoids asserting "yes, insured" as fact.
 const faqs = [
   {
     q: "How much does painting and decorating cost?",
-    a: "We don't publish set prices, because every job is different — room size, surface condition, access and finish all affect cost. We'll usually need to see the property in person before confirming a price, so get in touch with some details about your project and we'll arrange a time to visit and give you a clear, honest quote.",
+    a: "We don't publish set prices, because every job is different — room size, surface condition, access and finish all affect cost. We'll usually need to see the property in person before confirming a price, so get in touch with some details about your project and we'll arrange a time to visit and follow up with a quote.",
   },
   {
     q: "How do I get a quote?",
-    a: `Call us on ${business.phoneDisplay} or fill in our contact form with a few details about the job. For most jobs we'll arrange to see the space before confirming a price, so there are no surprises later.`,
+    a: `Call us on ${business.phoneDisplay} or fill in our contact form with a few details about the job. For most jobs we'll arrange to see the space before confirming a price.`,
   },
   {
     q: "How long will my job take?",
@@ -23,7 +21,7 @@ const faqs = [
   },
   {
     q: "Are you insured?",
-    a: "Get in touch and we're happy to talk through our insurance cover for your specific job.",
+    a: "Yes, we're fully insured for both residential and commercial work.",
   },
   {
     q: "Do you provide free quotes?",

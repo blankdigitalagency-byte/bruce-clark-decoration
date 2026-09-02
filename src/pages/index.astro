@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import TrustBar from "../components/TrustBar.astro";
 import ServicesGrid from "../components/ServicesGrid.astro";
+import PaintBrands from "../components/PaintBrands.astro";
 import ValuesSection from "../components/ValuesSection.astro";
 import ProcessSteps from "../components/ProcessSteps.astro";
 import RecentWork from "../components/RecentWork.astro";
@@ -30,7 +31,7 @@ const homeFaqs = [
   },
   {
     q: "How far in advance should I book?",
-    a: "It depends on the season and job size — get in touch as early as you can and we'll give you an honest idea of our current availability.",
+    a: "It depends on the season and job size — get in touch as early as you can and we'll give you a realistic idea of our current availability.",
   },
 ];
 ---
@@ -44,6 +45,7 @@ const homeFaqs = [
 
   <TrustBar />
   <ServicesGrid />
+  <PaintBrands />
   <ValuesSection />
   <ProcessSteps />
   <RecentWork />
@@ -55,7 +57,7 @@ const homeFaqs = [
         All of Edinburgh <span class="text-olive-600">&amp; the Lothians</span>
       </h2>
       <p class="mt-4 text-lg text-ink-700/80">
-        We're not limited to a handful of postcodes — we cover the whole of Edinburgh and the surrounding areas, from tenement flats to detached villas, and we'll happily travel further for the right job.
+        We cover the whole of Edinburgh and the surrounding areas — from tenement flats to detached villas — and we'll happily travel further for the right job.
       </p>
     </div>
   </section>

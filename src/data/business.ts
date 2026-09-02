@@ -19,8 +19,7 @@ export const business = {
   instagram: "https://www.instagram.com/bruceclarkdecoration",
   // TODO(client): confirm the current active Facebook page URL before publishing — do not assume the old site's link is correct. Leave blank until confirmed.
   facebook: "",
-  // TODO(client): confirm this holds today, and provide policy/certificate details if so — do not publish "insured" as fact until confirmed.
-  insuranceConfirmed: false,
+  insuranceConfirmed: true,
   // TODO(client): confirm PDA (Painting and Decorating Association) membership, Dulux Select Decorator, or Farrow & Ball approved decorator status. If any apply, add here and surface on About page + footer.
   certifications: [] as { name: string; description: string }[],
   siteUrl: "https://www.bcdecoration.com",
@@ -71,12 +70,12 @@ export const services: ServiceDef[] = [
     shortName: "Residential Decorating",
     navLabel: "Residential Decorating",
     summary:
-      "Interior painting, meticulous preparation and expert wallpaper hanging for Edinburgh homes — from a single room refresh to a full property transformation.",
+      "Interior painting, meticulous preparation and expert wallpaper hanging for Edinburgh homes, whatever the scale of the project.",
     metaDescription:
       "Residential decorator in Edinburgh for high-end interior painting, preparation and wallpaper hanging. 26+ years' experience, 5-star Google rating. Get in touch for a free quote.",
     icon: "brush",
     bullets: [
-      "Interior painting for every room, in any finish",
+      "Interior painting for every room, to the finish you want",
       "Thorough surface preparation — filling, sanding, sealing",
       "Wallpaper hanging (see our dedicated Specialist Finishes page for full detail)",
       "Ceiling, cornice and woodwork painting",
@@ -111,7 +110,7 @@ export const services: ServiceDef[] = [
     bullets: [
       "Render, harling and sandstone painting",
       "Exterior woodwork — doors, windows, fascias and soffits",
-      "Weather-appropriate preparation, including washing down and repairs",
+      "Thorough preparation — washing down, repairs and priming before any paint goes on",
       "Gutters, downpipes and railings",
       "Stone and masonry paint suited to Edinburgh's climate",
       "Scaffold and access coordination for tenement and villa work",
@@ -194,16 +193,8 @@ export const services: ServiceDef[] = [
         a: "Yes, we're used to coordinating directly with letting agents, factors and property managers on turnaround jobs between tenancies.",
       },
       {
-        q: "Can you quote for a multi-unit or repeat contract?",
-        a: "Yes, get in touch with the details and we'll put together a quote for ongoing or multi-property work.",
-      },
-      {
-        q: "Can you work alongside our own contractors or maintenance team?",
-        a: "Yes, on larger commercial jobs we regularly coordinate with other trades, building managers and maintenance teams to fit around the wider schedule.",
-      },
-      {
-        q: "Do you sign NDAs or site inductions for commercial clients?",
-        a: "Yes, where a site requires an induction, method statement or confidentiality agreement before work starts, we're happy to complete whatever's needed.",
+        q: "Can you match our existing colour scheme?",
+        a: "Yes, we can match an existing scheme or help you choose something new that suits the space.",
       },
     ],
   },
@@ -228,7 +219,7 @@ export const locations: LocationDef[] = [
     metaDescription:
       "Decorator covering The Grange, Edinburgh. Interior and exterior painting for Victorian villas and townhouses. 26+ years' experience, 5-star Google rating.",
     intro:
-      "The Grange is one of Edinburgh's most distinctive conservation areas, its large Victorian villas set behind stone walls and mature gardens. Decorating work here tends to involve generously proportioned rooms, high ceilings and original period detailing that rewards careful, patient preparation.",
+      "The Grange is one of Edinburgh's most distinctive conservation areas, its large Victorian villas set behind stone walls and mature gardens. Decorating work here tends to involve generously proportioned rooms, high ceilings and original period detailing that needs careful, patient preparation.",
     landmarks: ["Grange Road", "Blackford Hill", "The Meadows", "St Giles' Cathedral (nearby city views)"],
     propertyNote:
       "Grange villas often retain original cornicing, ceiling roses and panelled woodwork, so interior work here is usually about respecting those features rather than overworking them — careful masking, appropriate paint sheens on period woodwork, and colour schemes that suit the proportions of Victorian rooms.",
