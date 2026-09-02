@@ -176,13 +176,13 @@ export const services: ServiceDef[] = [
     icon: "building",
     bullets: [
       "Offices, retail units and reception areas",
-      "Communal stairwells and tenement common areas",
       "Rental and let property redecoration between tenancies",
       "Hospitality, hair and beauty, and other trade premises",
       "Flexible scheduling to minimise disruption to your trading",
+      "Communal stairwells and tenement common areas",
       "Durable, high-traffic-suited paint systems",
-      "Minimal-disruption planning around staff, stock and customers",
-      "Working alongside factors, landlords, letting agents and other contractors",
+      "Working alongside factors, landlords and building managers",
+      "Careful scheduling that keeps access clear for residents throughout",
     ],
     faqs: [
       {

@@ -10,6 +10,7 @@ import CtaBand from "../components/CtaBand.astro";
 import Icon from "../components/Icon.astro";
 import { services } from "../data/business";
 import communalStairPhoto from "../assets/photos/communal-stair-mustard-terracotta.jpg";
+import paintSprayerPhoto from "../assets/photos/paint-sprayer-equipment.jpg";
 
 const service = services.find((s) => s.slug === "commercial-decorating-edinburgh")!;
 
@@ -31,14 +32,27 @@ const sectors = [
   <PageHero title={service.name} description={service.summary} />
 
   <ServiceDetail
-    photoCaption="Communal stairwell repaint, Edinburgh tenement"
+    photoCaption="Paint spraying equipment set up ahead of a commercial job"
     heading="Working Around Your Business"
-    bullets={service.bullets}
+    bullets={service.bullets.slice(0, 4)}
+    image={paintSprayerPhoto}
+    imageAlt="Paint spraying equipment set up ahead of a job, Edinburgh"
+  >
+    <p class="mt-4 text-ink-700/80 leading-relaxed">
+      A business can't always stop for decorating work, so we plan around what suits you — whether that means working in stages or around your quieter periods. We use paint systems suited to high-traffic commercial areas, and leave the space immaculate and ready to use as soon as we're finished.
+    </p>
+  </ServiceDetail>
+
+  <ServiceDetail
+    photoCaption="Communal stairwell repaint, Edinburgh tenement"
+    heading="Communal Stairwells & Shared Spaces"
+    bullets={service.bullets.slice(4)}
+    reverse
     image={communalStairPhoto}
     imageAlt="Repainted communal tenement stairwell with mustard and terracotta colour scheme, Edinburgh"
   >
     <p class="mt-4 text-ink-700/80 leading-relaxed">
-      A business can't always stop for decorating work, so we plan around what suits you — whether that means working in stages or around your quieter periods. We use paint systems suited to high-traffic commercial areas, and leave the space immaculate and ready to use as soon as we're finished.
+      Tenement and commercial stairwells take a lot of foot traffic, so we prepare and paint them to last — coordinating access with factors, landlords and residents so the shared space stays usable throughout the job.
     </p>
   </ServiceDetail>
 
