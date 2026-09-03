@@ -266,7 +266,7 @@ export const locations: LocationDef[] = [
         a: "Yes, we take on jobs of every size in Merchiston, from a single room in a terraced flat to a full villa redecoration.",
       },
       {
-        q: "Can you work around family schedules and school runs?",
+        q: "Can you work around busy family schedules?",
         a: "Yes, we're happy to agree working hours that fit around your household — just let us know what works when you get in touch.",
       },
     ],
