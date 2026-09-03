@@ -220,12 +220,12 @@ export const locations: LocationDef[] = [
       "Grange villas often retain original cornicing, ceiling roses and panelled woodwork, so interior work here is usually about respecting those features rather than overworking them — careful masking, appropriate paint sheens on period woodwork, and colour schemes that suit the proportions of Victorian rooms.",
     faqs: [
       {
-        q: "Do you work carefully around original period features in Grange villas?",
-        a: "Yes, Grange villas commonly have cornicing, ceiling roses and panelled doors we take particular care to protect and paint appropriately rather than over-fill or obscure.",
+        q: "Do you work carefully around original period features on properties in The Grange?",
+        a: "Yes, properties in The Grange commonly have cornicing, ceiling roses and panelled doors we take particular care to protect and paint appropriately rather than over-fill or obscure.",
       },
       {
-        q: "Can you help with exterior sandstone and render on Grange properties?",
-        a: "Yes, we carry out exterior painting and decoration on the sandstone, render and woodwork typical of Grange properties, prepared to suit conservation-area standards.",
+        q: "Can you help with exterior sandstone and render on properties in The Grange?",
+        a: "Yes, we carry out exterior painting and decoration on the sandstone, render and woodwork typical of properties in The Grange, prepared to suit conservation-area standards.",
       },
     ],
   },
@@ -241,11 +241,11 @@ export const locations: LocationDef[] = [
       "New Town flats typically have high ceilings, ornate cornicing and original shutters or sash windows, which means more time on preparation and a careful approach to woodwork finishes that suit a Georgian interior rather than a modern one.",
     faqs: [
       {
-        q: "Do you need factor or common stair permission for New Town common areas?",
+        q: "Do you need factor or common stair permission for shared stairs at properties in New Town?",
         a: "Where work involves a shared common stair, we're happy to coordinate with your factor on timing and access — just let us know when you get in touch.",
       },
       {
-        q: "Can you paint New Town cornicing and ceiling roses without damaging them?",
+        q: "Can you paint cornicing and ceiling roses on properties in New Town without damaging them?",
         a: "Yes, we take particular care around plaster cornicing and ceiling roses, using appropriate brushes and masking to keep detail crisp rather than clogged with paint.",
       },
     ],
@@ -283,12 +283,12 @@ export const locations: LocationDef[] = [
       "Morningside's older villas and semi-detached homes tend to have generous room sizes and original woodwork, so preparation and a period-appropriate finish are usually the priority, alongside efficient scheduling for busy family households.",
     faqs: [
       {
-        q: "Do you cover exterior work on Morningside villas?",
-        a: "Yes, exterior painting and decorating on the render, sandstone and woodwork typical of Morningside's villas and semi-detached homes is work we take on regularly.",
+        q: "Do you cover exterior work on villas in Morningside?",
+        a: "Yes, exterior painting and decorating on the render, sandstone and woodwork typical of villas and semi-detached homes in Morningside is work we take on regularly.",
       },
       {
-        q: "Can you match existing colour schemes in older Morningside homes?",
-        a: "Yes, we use a paint scanner to get as close as possible to an existing scheme, or we're happy to help you choose a fresh palette that suits a period Morningside interior.",
+        q: "Can you match existing colour schemes in older properties in Morningside?",
+        a: "Yes, we use a paint scanner to get as close as possible to an existing scheme, or we're happy to help you choose a fresh palette that suits a period interior in Morningside.",
       },
     ],
   },
@@ -308,8 +308,8 @@ export const locations: LocationDef[] = [
         a: "Yes, we regularly decorate the stone cottages and converted properties around Colinton village, working sympathetically with their individual character.",
       },
       {
-        q: "Can you help with exterior woodwork on older Colinton homes?",
-        a: "Yes, exterior woodwork — doors, windows, fascias — on older Colinton properties is work we take on regularly, prepared thoroughly to suit the property's exposure.",
+        q: "Can you help with exterior woodwork on older properties in Colinton?",
+        a: "Yes, exterior woodwork — doors, windows, fascias — on older properties in Colinton is work we take on regularly, prepared thoroughly to suit the property's exposure.",
       },
     ],
   },
@@ -325,12 +325,12 @@ export const locations: LocationDef[] = [
       "Stockbridge is dominated by tenement flats, many recently purchased and renovated, so we see a steady mix of full interior redecoration, wallpaper hanging in period rooms, and careful work around original cornicing and shared stair supplies.",
     faqs: [
       {
-        q: "Do you hang wallpaper in Stockbridge tenement flats?",
-        a: "Yes, wallpaper hanging in period Stockbridge flats — including pattern-matched feature walls — is work we take on regularly.",
+        q: "Do you hang wallpaper in tenement flats in Stockbridge?",
+        a: "Yes, wallpaper hanging in period flats in Stockbridge — including pattern-matched feature walls — is work we take on regularly.",
       },
       {
         q: "Can you work around a tenement's shared common stair?",
-        a: "Yes, we're experienced with the shared stair arrangements common in Stockbridge tenements and will confirm access with you and your factor before starting.",
+        a: "Yes, we're experienced with the shared stair arrangements common to tenements in Stockbridge and will confirm access with you and your factor before starting.",
       },
     ],
   },
