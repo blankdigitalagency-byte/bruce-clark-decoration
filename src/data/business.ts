@@ -93,7 +93,7 @@ export const services: ServiceDef[] = [
         a: "It depends on the amount of preparation and work involved — every job is different, so we'll give you an accurate timescale after seeing the room rather than a generic figure.",
       },
       {
-        q: "Can you match Edinburgh tenement and period property features?",
+        q: "Do you work carefully around period features in tenements and older properties?",
         a: "Yes, we regularly work in Edinburgh's tenements, New Town flats and Victorian villas, taking care around cornicing, ceiling roses and original woodwork.",
       },
     ],
@@ -119,7 +119,7 @@ export const services: ServiceDef[] = [
     faqs: [
       {
         q: "What time of year is best for exterior painting in Edinburgh?",
-        a: "Spring through early autumn gives the most reliable drying conditions, though we monitor the forecast closely and plan around it — exterior paint needs the surface to be properly dry before application.",
+        a: "Spring through early autumn usually gives the most reliable conditions, though we monitor the forecast closely and plan around it — most exterior paints need a minimum temperature to cure properly, so timing depends on conditions as much as the calendar.",
       },
       {
         q: "Do you work on tenement common stairs and shared exteriors?",
@@ -156,7 +156,7 @@ export const services: ServiceDef[] = [
       },
       {
         q: "Can you hang patterned or textured wallpaper?",
-        a: "Yes, pattern matching on repeat designs and handling delicate or heavyweight wallcoverings is a core part of what we do — we take the time to get seams and pattern alignment right.",
+        a: "Yes, pattern matching on repeat designs and handling delicate or heavyweight wallcoverings is a core part of what we do, with close attention paid to seam placement and pattern alignment throughout.",
       },
       {
         q: "Do you supply the wallpaper or do I need to buy it myself?",
@@ -195,7 +195,7 @@ export const services: ServiceDef[] = [
       },
       {
         q: "Can you match our existing colour scheme?",
-        a: "Yes, we can match an existing scheme or help you choose something new that suits the space.",
+        a: "Yes, we use a paint scanner to get as close as possible to an existing scheme, or we're happy to help you choose something new that suits the space.",
       },
     ],
   },
@@ -294,7 +294,7 @@ export const locations: LocationDef[] = [
       },
       {
         q: "Can you match existing colour schemes in older Morningside homes?",
-        a: "Yes, we can colour match existing schemes or help you choose a fresh palette that suits a period Morningside interior.",
+        a: "Yes, we use a paint scanner to get as close as possible to an existing scheme, or we're happy to help you choose a fresh palette that suits a period Morningside interior.",
       },
     ],
   },
