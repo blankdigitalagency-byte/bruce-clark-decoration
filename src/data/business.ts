@@ -30,9 +30,6 @@ export const business = {
   longitude: -3.1883,
 } as const;
 
-// TODO(client): supply 3-6 real quotes from actual Google reviews (with the reviewer's first
-// name) to power the testimonials section and Review schema. Do not fabricate reviews — leave
-// this empty until real quotes are provided; the aggregate 5.0/28 rating is shown regardless.
 export const reviews: { author: string; rating: number; text: string }[] = [
   {
     author: "Claire",
