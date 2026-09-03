@@ -10,14 +10,11 @@ Manage the background server with `astro dev stop`, `astro dev status`, and `ast
 
 ## Outstanding client confirmations
 
-- **Web3Forms access key — most urgent.** Both contact forms (`ContactForm.astro`, `HeroEnquiryForm.astro`) still ship with the literal placeholder `WEB3FORMS_ACCESS_KEY`, so enquiries submitted on the live site currently go nowhere. Client needs to sign up free at web3forms.com with their own email and send over the key.
-- Public enquiries email address — `business.email` in `src/data/business.ts` is still a placeholder (`info@bcdecoration.com`); confirm a real address or drop email as a contact method.
-- Current Facebook page URL (old site's link not assumed correct).
-- PDA membership / Dulux Select Decorator / Farrow & Ball approved decorator status, if any apply.
+- **Web3Forms access key — most urgent.** Both contact forms (`ContactForm.astro`, `HeroEnquiryForm.astro`) still ship with the literal placeholder `WEB3FORMS_ACCESS_KEY`, so enquiries submitted on the live site currently go nowhere. Client is setting this up.
 - Full trading address, if one should appear (not required for a service-area Google Business Profile listing).
-- Real project photos (The Grange, Blackford, Braids, Mortonhall, Scotland Street, West Castle Road, van/team photos) — confirm past clients are comfortable with address-identifiable photos before publishing any location-tagged image.
+- Real project photos tied to a specific address (The Grange, Blackford, Braids, Mortonhall, Scotland Street, West Castle Road) — confirm past clients are comfortable with address-identifiable photos before publishing any location-tagged image.
 
-Resolved: public liability insurance is confirmed (Direct Line) — the site states "fully insured" but does not name the insurer. Reviews are populated (Claire, Elaine, Emma).
+Resolved: public liability insurance confirmed (Direct Line, not named on-site). Reviews populated (Claire, Elaine, Emma). Email confirmed (bruce@bcdecoration.com). Facebook URL confirmed. No trade certifications to list. Van photo received and live on the About page.
 
 ## Documentation
 

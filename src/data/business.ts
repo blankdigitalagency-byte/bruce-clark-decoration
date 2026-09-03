@@ -4,8 +4,7 @@ export const business = {
   tagline: "Painters & Decorators in Edinburgh",
   phoneDisplay: "07591 141732",
   phoneHref: "tel:07591141732",
-  // TODO(client): confirm a public enquiries email address, or remove email contact method if he prefers phone/form only.
-  email: "info@bcdecoration.com",
+  email: "bruce@bcdecoration.com",
   city: "Edinburgh",
   region: "Scotland",
   country: "GB",
@@ -17,10 +16,8 @@ export const business = {
     { days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], opens: "08:00", closes: "16:30" },
   ],
   instagram: "https://www.instagram.com/bruceclarkdecoration",
-  // TODO(client): confirm the current active Facebook page URL before publishing — do not assume the old site's link is correct. Leave blank until confirmed.
-  facebook: "",
+  facebook: "https://www.facebook.com/profile.php?id=100027116847060",
   insuranceConfirmed: true,
-  // TODO(client): confirm PDA (Painting and Decorating Association) membership, Dulux Select Decorator, or Farrow & Ball approved decorator status. If any apply, add here and surface on About page + footer.
   certifications: [] as { name: string; description: string }[],
   siteUrl: "https://www.bcdecoration.com",
   // TODO(client): confirm a full trading address if one should appear (many sole-trader decorators operate without a public premises address — Google Business Profile service-area listings don't require one). Left blank pending confirmation.
