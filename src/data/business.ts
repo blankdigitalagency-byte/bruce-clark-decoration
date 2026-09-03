@@ -220,11 +220,11 @@ export const locations: LocationDef[] = [
       "Grange villas often retain original cornicing, ceiling roses and panelled woodwork, so interior work here is usually about respecting those features rather than overworking them — careful masking, appropriate paint sheens on period woodwork, and colour schemes that suit the proportions of Victorian rooms.",
     faqs: [
       {
-        q: "Do you work carefully around original period features in The Grange?",
+        q: "Do you work carefully around original period features in Grange villas?",
         a: "Yes, Grange villas commonly have cornicing, ceiling roses and panelled doors we take particular care to protect and paint appropriately rather than over-fill or obscure.",
       },
       {
-        q: "Can you help with exterior sandstone and render in The Grange?",
+        q: "Can you help with exterior sandstone and render on Grange properties?",
         a: "Yes, we carry out exterior painting and decoration on the sandstone, render and woodwork typical of Grange properties, prepared to suit conservation-area standards.",
       },
     ],
