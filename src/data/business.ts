@@ -98,7 +98,7 @@ export const services: ServiceDef[] = [
     shortName: "Exterior Painting",
     navLabel: "Exterior Painting & Decorating",
     summary:
-      "Exterior painting and decorating for Edinburgh's tenements, villas and render — an exacting finish prepared to suit the surface and its exposure.",
+      "Exterior painting and decorating for Edinburgh's tenements and villas — render, harling and sandstone finished to an exacting standard, prepared to suit the surface and its exposure.",
     metaDescription:
       "Exterior painter and decorator in Edinburgh. Harling, render, sandstone and woodwork finished to an exacting standard. 26+ years' experience. Free quotes.",
     icon: "building",
