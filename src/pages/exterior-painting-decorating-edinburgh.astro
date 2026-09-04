@@ -8,7 +8,7 @@ import Faq from "../components/Faq.astro";
 import ServicesGrid from "../components/ServicesGrid.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { services } from "../data/business";
-import servicePhoto from "../assets/photos/exterior-navy-front-door.jpg";
+import servicePhoto from "../assets/photos/conservatory-exterior-repaint.jpg";
 
 const service = services.find((s) => s.slug === "exterior-painting-decorating-edinburgh")!;
 ---
@@ -23,11 +23,11 @@ const service = services.find((s) => s.slug === "exterior-painting-decorating-ed
   <PageHero title={service.name} description={service.summary} />
 
   <ServiceDetail
-    photoCaption="Exterior repaint, Edinburgh property"
+    photoCaption="Exterior repaint, East Lothian property"
     heading="How We Approach Exterior Painting"
     bullets={service.bullets}
     image={servicePhoto}
-    imageAlt="Freshly painted navy front door on a sandstone Edinburgh tenement"
+    imageAlt="Repainted Victorian conservatory exterior on an East Lothian property"
   >
     <p class="mt-4 text-ink-700/80 leading-relaxed">
       Edinburgh's exteriors — render, harling, sandstone and traditional woodwork — need thorough preparation, and the right conditions to paint in. Most exterior paints need a minimum temperature to cure properly, so we work around the forecast rather than painting regardless of the weather. We wash down, repair and prime beforehand, using systems suited to the surface and its exposure.
