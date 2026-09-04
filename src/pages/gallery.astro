@@ -8,25 +8,14 @@ import CtaBand from "../components/CtaBand.astro";
 import bathroomGreenTile from "../assets/photos/bathroom-green-tile-repaint.jpg";
 import bayWindowBareFloor from "../assets/photos/bay-window-room-bare-floor.jpg";
 import bayWindowCorner from "../assets/photos/bay-window-room-corner.jpg";
-import bayWindowEmpty from "../assets/photos/bay-window-room-empty.jpg";
-import bayWindowLightFloor from "../assets/photos/bay-window-room-light-floor.jpg";
 import bedroomDarkWoodwork from "../assets/photos/bedroom-dark-woodwork.jpg";
 import bedroomWallpaperChandelier from "../assets/photos/bedroom-wallpaper-chandelier.jpg";
-import entranceHallStaircase from "../assets/photos/entrance-hall-staircase-view.jpg";
-import entranceHallTiled from "../assets/photos/entrance-hall-tiled-floor.jpg";
 import exteriorNavyDoor from "../assets/photos/exterior-navy-front-door.jpg";
-import hallwayFloral from "../assets/photos/hallway-floral-wallpaper.jpg";
-import hallwayMustard from "../assets/photos/hallway-mustard-shelving.jpg";
-import kitchenIsland from "../assets/photos/kitchen-island-open-plan.jpg";
-import kitchenMustard from "../assets/photos/kitchen-mustard-feature-wall.jpg";
-import landingCorner from "../assets/photos/landing-corner-repaint.jpg";
 import landingPlain from "../assets/photos/landing-plain-repaint.jpg";
 import landingRadiator from "../assets/photos/landing-radiator-repaint.jpg";
 import livingRoomSageGreen from "../assets/photos/living-room-sage-green-repaint.jpg";
-import roomLightWoodFloor from "../assets/photos/room-light-wood-floor.jpg";
 import roomPlainDoor from "../assets/photos/room-plain-door-radiator.jpg";
 import scaffoldPrep from "../assets/photos/scaffold-interior-preparation.jpg";
-import staircaseMustard from "../assets/photos/staircase-mustard-navy-runner.jpg";
 import wallpaperMural from "../assets/photos/wallpaper-mural-feature-wall.jpg";
 import kitchenGreyIsland from "../assets/photos/kitchen-grey-island-repaint.jpg";
 import conservatoryExterior from "../assets/photos/conservatory-exterior-repaint.jpg";
@@ -50,26 +39,20 @@ import wardrobeBuiltInStockbridge from "../assets/photos/wardrobe-built-in-stock
 import bayWindowRoomInverleith from "../assets/photos/bay-window-room-inverleith.jpg";
 
 const photos = [
-  { src: staircaseMustard, alt: "Staircase repaint with mustard walls and navy stair runner, Edinburgh" },
+  { src: staircaseYellowNavyInverleith, alt: "Repainted staircase with yellow panelling and navy treads, Inverleith, Edinburgh" },
   { src: bathroomGreenTile, alt: "Green tiled bathroom repaint with brass fixtures, Edinburgh" },
-  { src: kitchenMustard, alt: "Kitchen repaint with mustard feature wall, Edinburgh" },
+  { src: kitchenMustardYellowStockbridge, alt: "Mustard yellow kitchen repaint with window seat, Stockbridge, Edinburgh" },
   { src: wallpaperMural, alt: "Botanical mural wallpaper feature wall, Edinburgh interior" },
   { src: livingRoomSageGreen, alt: "Sage green living room repaint with fireplace, Edinburgh" },
   { src: exteriorNavyDoor, alt: "Freshly painted navy front door on a Georgian townhouse, Great King Street, New Town" },
   { src: bedroomWallpaperChandelier, alt: "Bedroom feature wallpaper hanging with chandelier, Edinburgh" },
-  { src: entranceHallStaircase, alt: "Repainted staircase and hallway with patterned tiled floor, Edinburgh" },
-  { src: kitchenIsland, alt: "Open-plan kitchen with botanical wallpaper, Edinburgh" },
-  { src: hallwayMustard, alt: "Mustard hallway repaint with built-in shelving, Edinburgh" },
+  { src: hallwayTiledFloorShandon, alt: "Repainted hallway with patterned Victorian tile floor, Shandon, Edinburgh" },
+  { src: kitchenFloralWallpaperStockbridge, alt: "Kitchen with floral feature wallpaper and oak island, Stockbridge, Edinburgh" },
+  { src: wardrobeBuiltInStockbridge, alt: "Hand-painted, built-in wardrobe and shelving, Stockbridge, Edinburgh" },
   { src: bedroomDarkWoodwork, alt: "Bedroom with freshly painted dark woodwork and shutters, Edinburgh" },
-  { src: entranceHallTiled, alt: "Entrance hallway repaint with patterned tile floor, Edinburgh" },
-  { src: hallwayFloral, alt: "Hallway with feature floral wallpaper, Edinburgh" },
-  { src: bayWindowEmpty, alt: "Repainted period room with fireplace and bay window, Edinburgh" },
-  { src: roomLightWoodFloor, alt: "Repainted room with light wood flooring and bay window, Edinburgh" },
   { src: bayWindowBareFloor, alt: "Repainted bay window room with dark wood flooring, Edinburgh" },
   { src: landingRadiator, alt: "Repainted landing with staircase bannister, Edinburgh" },
   { src: bayWindowCorner, alt: "Freshly painted room with bay window and garden doors, Edinburgh" },
-  { src: bayWindowLightFloor, alt: "Repainted bay window room with light wood flooring, Edinburgh" },
-  { src: landingCorner, alt: "Repainted landing and corridor, Edinburgh" },
   { src: landingPlain, alt: "Repainted landing with painted woodwork, Edinburgh" },
   { src: roomPlainDoor, alt: "Repainted room with painted doors and radiator, Edinburgh" },
   { src: scaffoldPrep, alt: "Interior preparation work ahead of redecoration, Edinburgh" },
@@ -87,11 +70,6 @@ const photos = [
   { src: bedroomDarkGreenNewTown, alt: "Dark green bedroom repaint with period fireplace, New Town, Edinburgh" },
   { src: staircaseModernGrange, alt: "Repainted staircase with modern handrail, The Grange, Edinburgh" },
   { src: hallwayBirdWallpaperStockbridge, alt: "Hallway with feature bird and botanical wallpaper, Stockbridge, Edinburgh" },
-  { src: staircaseYellowNavyInverleith, alt: "Repainted staircase with yellow panelling and navy treads, Inverleith, Edinburgh" },
-  { src: hallwayTiledFloorShandon, alt: "Repainted hallway with patterned Victorian tile floor, Shandon, Edinburgh" },
-  { src: kitchenMustardYellowStockbridge, alt: "Mustard yellow kitchen repaint with window seat, Stockbridge, Edinburgh" },
-  { src: kitchenFloralWallpaperStockbridge, alt: "Kitchen with floral feature wallpaper and oak island, Stockbridge, Edinburgh" },
-  { src: wardrobeBuiltInStockbridge, alt: "Hand-painted, built-in wardrobe and shelving, Stockbridge, Edinburgh" },
   { src: bayWindowRoomInverleith, alt: "Repainted period room with bay window and light wood flooring, Inverleith, Edinburgh" },
 ];
 ---
@@ -104,7 +82,7 @@ const photos = [
   <Breadcrumbs crumbs={[{ label: "Gallery", path: "/gallery" }]} />
   <PageHero title="Our Work" description="A selection of recent painting and decorating projects across Edinburgh." />
 
-  <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:py-20 sm:px-6 lg:px-8">
     <div class="columns-1 gap-5 sm:columns-2 lg:columns-3">
       {photos.map((p) => (
         <div class="mb-5 break-inside-avoid overflow-hidden rounded-2xl shadow-brand ring-1 ring-black/5">
