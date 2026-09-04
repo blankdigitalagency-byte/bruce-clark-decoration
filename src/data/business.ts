@@ -203,8 +203,10 @@ export type LocationDef = {
   metaDescription: string;
   intro: string;
   landmarks: string[];
+  postcode: string;
   propertyNote: string;
   faqs: { q: string; a: string }[];
+  nearby: string[];
 };
 
 export const locations: LocationDef[] = [
@@ -216,6 +218,7 @@ export const locations: LocationDef[] = [
     intro:
       "The Grange is one of Edinburgh's most distinctive conservation areas, its large Victorian villas set behind stone walls and mature gardens. Decorating work here tends to involve generously proportioned rooms, high ceilings and original period detailing that needs careful, patient preparation.",
     landmarks: ["Grange Road", "Blackford Hill", "The Meadows", "St Giles' Cathedral (nearby city views)"],
+    postcode: "EH9",
     propertyNote:
       "Grange villas often retain original cornicing, ceiling roses and panelled woodwork, so interior work here is usually about respecting those features rather than overworking them — careful masking, appropriate paint sheens on period woodwork, and colour schemes that suit the proportions of Victorian rooms.",
     faqs: [
@@ -228,6 +231,7 @@ export const locations: LocationDef[] = [
         a: "Yes, we carry out exterior painting and decoration on the sandstone, render and woodwork typical of properties in The Grange, prepared to suit conservation-area standards.",
       },
     ],
+    nearby: ["morningside", "merchiston"],
   },
   {
     slug: "new-town",
@@ -237,6 +241,7 @@ export const locations: LocationDef[] = [
     intro:
       "Edinburgh's New Town is a UNESCO World Heritage site of Georgian terraces and elegant flats, and decorating within it means working to a standard that respects the architecture — tall ceilings, deep cornicing, and often shared common stairs.",
     landmarks: ["Princes Street Gardens", "Charlotte Square", "George Street", "Scotland Street"],
+    postcode: "EH2 / EH3",
     propertyNote:
       "New Town flats typically have high ceilings, ornate cornicing and original shutters or sash windows, which means more time on preparation and a careful approach to woodwork finishes that suit a Georgian interior rather than a modern one.",
     faqs: [
@@ -249,6 +254,7 @@ export const locations: LocationDef[] = [
         a: "Yes, we take particular care around plaster cornicing and ceiling roses, using appropriate brushes and masking to keep detail crisp rather than clogged with paint.",
       },
     ],
+    nearby: ["stockbridge"],
   },
   {
     slug: "merchiston",
@@ -258,6 +264,7 @@ export const locations: LocationDef[] = [
     intro:
       "Merchiston's leafy streets of Victorian terraces and villas, close to Napier University and Bruntsfield, see a steady mix of family home refreshes and larger period property projects.",
     landmarks: ["Merchiston Avenue", "Colinton Road", "Napier University", "Harrison Park"],
+    postcode: "EH10 / EH11",
     propertyNote:
       "Merchiston properties range from compact terraced flats to larger detached villas, so we scope each job individually — smaller flats often need efficient, minimal-disruption scheduling, while villas allow more scope for full redecoration projects.",
     faqs: [
@@ -270,6 +277,7 @@ export const locations: LocationDef[] = [
         a: "Yes, we're happy to agree working hours that fit around your household — just let us know what works when you get in touch.",
       },
     ],
+    nearby: ["morningside", "the-grange"],
   },
   {
     slug: "morningside",
@@ -279,6 +287,7 @@ export const locations: LocationDef[] = [
     intro:
       "Morningside's mix of Victorian villas, tenement flats and traditional shopfronts along Morningside Road means our work here spans everything from period interior redecoration to exterior refreshes on well-loved family homes.",
     landmarks: ["Morningside Road", "Braid Hills", "Comiston", "Church Hill"],
+    postcode: "EH10",
     propertyNote:
       "Morningside's older villas and semi-detached homes tend to have generous room sizes and original woodwork, so preparation and a period-appropriate finish are usually the priority, alongside efficient scheduling for busy family households.",
     faqs: [
@@ -291,6 +300,7 @@ export const locations: LocationDef[] = [
         a: "Yes, we use a paint scanner to get as close as possible to an existing scheme, or we're happy to help you choose a fresh palette that suits a period interior in Morningside.",
       },
     ],
+    nearby: ["merchiston", "the-grange", "colinton"],
   },
   {
     slug: "colinton",
@@ -300,6 +310,7 @@ export const locations: LocationDef[] = [
     intro:
       "Colinton's village character, with its stone cottages, converted mill buildings and family homes near the Water of Leith, calls for decorating work that's sympathetic to older, characterful properties as much as it is efficient for busy households.",
     landmarks: ["Colinton Village", "Water of Leith Walkway", "Bonaly", "Redford Road"],
+    postcode: "EH13",
     propertyNote:
       "Colinton's stone cottages and converted properties often have thicker walls, smaller window openings and individual character worth preserving, so we adapt our preparation and finish choices property by property rather than applying a one-size approach.",
     faqs: [
@@ -312,6 +323,7 @@ export const locations: LocationDef[] = [
         a: "Yes, exterior woodwork — doors, windows, fascias — on older properties in Colinton is work we take on regularly, prepared thoroughly to suit the property's exposure.",
       },
     ],
+    nearby: ["morningside", "merchiston"],
   },
   {
     slug: "stockbridge",
@@ -321,6 +333,7 @@ export const locations: LocationDef[] = [
     intro:
       "Stockbridge's tenement flats around Raeburn Place and St Stephen Street are some of the most characterful properties we work on — full of original detail, and often recently renovated by owners wanting a considered, well-finished interior.",
     landmarks: ["Raeburn Place", "St Stephen Street", "Water of Leith", "Deanhaugh Street"],
+    postcode: "EH3 / EH4",
     propertyNote:
       "Stockbridge is dominated by tenement flats, many recently purchased and renovated, so we see a steady mix of full interior redecoration, wallpaper hanging in period rooms, and careful work around original cornicing and shared stair supplies.",
     faqs: [
@@ -333,5 +346,6 @@ export const locations: LocationDef[] = [
         a: "Yes, we're experienced with the shared stair arrangements common to tenements in Stockbridge and will confirm access with you and your factor before starting.",
       },
     ],
+    nearby: ["new-town"],
   },
 ];
