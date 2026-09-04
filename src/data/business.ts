@@ -107,7 +107,7 @@ export const services: ServiceDef[] = [
       "Exterior woodwork — doors, windows, fascias and soffits",
       "Thorough preparation — washing down, repairs and priming before any paint goes on",
       "Gutters, downpipes and railings",
-      "Stone and masonry paint suited to Edinburgh's climate",
+      "Durable stone and masonry paint systems",
       "Scaffold and access coordination for tenement and villa work",
     ],
     faqs: [
@@ -230,6 +230,10 @@ export const locations: LocationDef[] = [
         q: "Can you help with exterior sandstone and render on properties in The Grange?",
         a: "Yes, we carry out exterior painting and decoration on the sandstone, render and woodwork typical of properties in The Grange, prepared to suit conservation-area standards.",
       },
+      {
+        q: "Is planning permission needed for exterior work on properties in The Grange?",
+        a: "The Grange is a conservation area, so some exterior changes need consent from the council. We're happy to advise on what's likely to need permission and can work to whatever's already been approved.",
+      },
     ],
     nearby: ["morningside", "merchiston"],
   },
@@ -252,6 +256,10 @@ export const locations: LocationDef[] = [
       {
         q: "Can you paint cornicing and ceiling roses on properties in New Town without damaging them?",
         a: "Yes, we take particular care around plaster cornicing and ceiling roses, using appropriate brushes and masking to keep detail crisp rather than clogged with paint.",
+      },
+      {
+        q: "Do you work on listed properties in New Town?",
+        a: "Yes, much of New Town is listed, so we're used to working within those restrictions — matching existing colours and finishes rather than introducing anything that would need separate consent.",
       },
     ],
     nearby: ["stockbridge"],
@@ -276,6 +284,10 @@ export const locations: LocationDef[] = [
         q: "Can you work around busy family schedules?",
         a: "Yes, we're happy to agree working hours that fit around your household — just let us know what works when you get in touch.",
       },
+      {
+        q: "Do you take on rental properties for landlords near Napier University?",
+        a: "Yes, we regularly do turnaround decorating for landlords and letting agents around Merchiston, working to fit tenancy changeover dates.",
+      },
     ],
     nearby: ["morningside", "the-grange"],
   },
@@ -298,6 +310,10 @@ export const locations: LocationDef[] = [
       {
         q: "Can you match existing colour schemes in older properties in Morningside?",
         a: "Yes, we use a paint scanner to get as close as possible to an existing scheme, or we're happy to help you choose a fresh palette that suits a period interior in Morningside.",
+      },
+      {
+        q: "Do you take on smaller jobs, like a single room, in Morningside?",
+        a: "Yes, we take on jobs of any size in Morningside, from a single room to a full property redecoration.",
       },
     ],
     nearby: ["merchiston", "the-grange", "colinton"],
@@ -322,6 +338,10 @@ export const locations: LocationDef[] = [
         q: "Can you help with exterior woodwork on older properties in Colinton?",
         a: "Yes, exterior woodwork — doors, windows, fascias — on older properties in Colinton is work we take on regularly, prepared thoroughly to suit the property's exposure.",
       },
+      {
+        q: "Do you work on converted mill buildings in Colinton?",
+        a: "Yes, the converted mill buildings around Colinton often mix original stone with more modern additions, and we adapt our approach to suit both.",
+      },
     ],
     nearby: ["morningside", "merchiston"],
   },
@@ -344,6 +364,10 @@ export const locations: LocationDef[] = [
       {
         q: "Can you work around a tenement's shared common stair?",
         a: "Yes, we're experienced with the shared stair arrangements common to tenements in Stockbridge and will confirm access with you and your factor before starting.",
+      },
+      {
+        q: "Do you offer colour advice for period flats in Stockbridge?",
+        a: "Yes, we're happy to advise on colours and finishes that suit a period Stockbridge flat, whether you're after something true to the original or a more contemporary scheme.",
       },
     ],
     nearby: ["new-town"],
