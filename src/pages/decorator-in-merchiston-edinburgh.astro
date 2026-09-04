@@ -18,7 +18,7 @@ const path = `/decorator-in-${location.slug}-edinburgh`;
   <Breadcrumbs crumbs={[{ label: `Decorator in ${location.name}`, path }]} />
   <PageHero title={`Decorator in ${location.name}, Edinburgh`} description={location.intro} />
 
-  <section class="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+  <section class="mx-auto max-w-7xl px-4 py-14 sm:py-20 sm:px-6 lg:px-8">
     <div class="grid gap-12 lg:grid-cols-2 lg:items-center">
       <PhotoPlaceholder caption={`Project in ${location.name}, Edinburgh`} aspect="wide" />
       <div>
@@ -41,7 +41,7 @@ const path = `/decorator-in-${location.slug}-edinburgh`;
 
   {location.nearby.length > 0 && (
     <section class="bg-beige-50">
-      <div class="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 lg:px-8">
+      <div class="mx-auto max-w-3xl px-4 py-12 sm:py-16 text-center sm:px-6 lg:px-8">
         <p class="text-sm font-semibold uppercase tracking-wide text-olive-600">Nearby Areas</p>
         <h2 class="mt-2 font-display text-2xl font-semibold tracking-tight text-ink-900 sm:text-3xl">Areas near {location.name} we also cover</h2>
         <div class="mt-6 flex flex-wrap justify-center gap-3">
