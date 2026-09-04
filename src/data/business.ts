@@ -104,11 +104,11 @@ export const services: ServiceDef[] = [
     icon: "building",
     bullets: [
       "Render, harling and sandstone painting",
+      "Exterior woodwork — doors, windows, fascias and soffits",
+      "Thorough preparation — washing down, repairs and priming before any paint goes on",
       "Gutters, downpipes and railings",
       "Stone and masonry paint suited to Edinburgh's climate",
       "Scaffold and access coordination for tenement and villa work",
-      "Exterior woodwork — doors, windows, fascias and soffits",
-      "Thorough preparation — washing down, repairs and priming before any paint goes on",
     ],
     faqs: [
       {

@@ -9,7 +9,6 @@ import ServicesGrid from "../components/ServicesGrid.astro";
 import CtaBand from "../components/CtaBand.astro";
 import { services } from "../data/business";
 import servicePhoto from "../assets/photos/exterior-navy-front-door.jpg";
-import conservatoryPhoto from "../assets/photos/conservatory-exterior-repaint.jpg";
 
 const service = services.find((s) => s.slug === "exterior-painting-decorating-edinburgh")!;
 ---
@@ -26,25 +25,12 @@ const service = services.find((s) => s.slug === "exterior-painting-decorating-ed
   <ServiceDetail
     photoCaption="Exterior repaint, Great King Street, New Town"
     heading="How We Approach Exterior Painting"
-    bullets={service.bullets.slice(0, 4)}
+    bullets={service.bullets}
     image={servicePhoto}
     imageAlt="Freshly painted navy front door on a Georgian townhouse, Great King Street, New Town, Edinburgh"
   >
     <p class="mt-4 text-ink-700/80 leading-relaxed">
       Edinburgh's exteriors — render, harling, sandstone and traditional woodwork — need thorough preparation, and the right conditions to paint in. Most exterior paints need a minimum temperature to cure properly, so we work around the forecast rather than painting regardless of the weather. We wash down, repair and prime beforehand, using systems suited to the surface and its exposure.
-    </p>
-  </ServiceDetail>
-
-  <ServiceDetail
-    photoCaption="Repainted conservatory, East Lothian"
-    heading="Exterior Woodwork & Glasshouses"
-    bullets={service.bullets.slice(4)}
-    reverse
-    image={conservatoryPhoto}
-    imageAlt="Repainted Victorian conservatory exterior on an East Lothian property"
-  >
-    <p class="mt-4 text-ink-700/80 leading-relaxed">
-      Painted timber structures — doors, windows and traditional glasshouses — need the same care as any other exterior surface: thorough preparation, the right primers, and a finish that can stand up to the weather.
     </p>
   </ServiceDetail>
 
