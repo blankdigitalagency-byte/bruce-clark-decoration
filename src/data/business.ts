@@ -71,6 +71,7 @@ export const services: ServiceDef[] = [
     bullets: [
       "Interior painting for every room, to the finish you want",
       "Thorough surface preparation — filling, sanding, sealing",
+      "Dustless sanding equipment for a cleaner, tidier job",
       "Wallpaper hanging (see our dedicated Specialist Finishes page for full detail)",
       "Ceiling, cornice and woodwork painting",
       "Hand-painted fitted wardrobes and bespoke furniture",
@@ -139,6 +140,7 @@ export const services: ServiceDef[] = [
       "Wallpaper hanging — pattern matching, feature walls, full rooms",
       "Lining paper preparation for a smooth, long-lasting finish",
       "Ames taping — machine and hand taping and jointing, whichever suits the job, for a seamless wall and ceiling finish",
+      "Dustless sanding equipment for smooth, dust-free jointing",
       "Textured, heavyweight and delicate wallcoverings handled with care",
       "Coordination with plasterers and joiners on new-build and renovation jobs",
       "Repairs and re-hangs where previous wallpaper has failed",
